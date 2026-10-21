@@ -10,7 +10,7 @@ Shared task board for parallel agent sessions.
 | 6c06fb0a | arena/6c06fb0a-koreatrip2 | Multi-page verified site: `data/itinerary.json`, `pages/*`, `assets/style.css`, `build_site.py`, `index.html`, `COORDINATION.md` | merged to main (PR #2) |
 | d20d7578 | arena/d20d7578-koreatrip2 | Verification worksheet, day-by-day and activities pages, generator | merged to main (PR #4); earlier pages archived and redirected after audit |
 | 96a67227 | arena/96a67227-koreatrip2 | Canonical 11-page dashboard, source audit, validation and legacy URL migration | merged to main (PRs #5, #7, #8) |
-| 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + official brand source integration (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours) | ready to merge |
+| 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + official brand source integration (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours) | merged to main (PR #9) |
 
 ## Tasks
 
@@ -103,3 +103,7 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   - **L7 HAEUNDAE by LOTTE Official (`https://www.lottehotel.com/prerendered/haeundae-l7/en/about/art-experience/l7/index.html` & `https://www.lottehotel.com/haeundae-l7/ko/hotel-offers/packages/2024-06/memories-in-perfume.html`)**: Confirmed `55 Haeun-daero 570beon-gil, Haeundae-gu, Busan`, check-in `15:00`, check-out `12:00` (Nov).
   - **Olive Young Myeongdong Town Flagship (`https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=148763`)**: Confirmed `53 Myeongdong-gil, Jung-gu` and `10:00–22:30` daily hours (correcting the itinerary's `8:00–12:00am` claim).
   - **Seongsu & Ikseon Official Brand Sources**: Blue Elephant (`https://blueelephant.co/product/space-seongsu/4552/`), Musinsa Standard Seongsu (`https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=216520`), MARGESHERWOOD Flagship (`https://global.margesherwood.com/pages/stockist-official`), Eternalog (`https://eternalog-fotobooth.com/21`), Acorn Caricature (`https://acorncaricature.imweb.me/Map?sort=UPDATE&category=1i08d61PE1`), Break Silence (`https://breaksilence-world.com/contact.html`), Jayeondo Salt Bread (`https://english.visitseoul.net/area/saltbread-in-seaside/ENPxtexu0`), Cafe Onion (`https://english.visitseoul.net/eat/cafe-onion/ENP020587`), Haeundae Beach (`https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=373`), and Haeundae Traditional Market (`https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=459&vcontsId=84963`).
+- **PR & Merge Result (Session `535004bc`)**:
+  - PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/9
+  - Validation (`node scripts/validate.mjs` & `node scripts/build.mjs`): Passed (`9 days, 58 place entries, 11 routes, 11 HTML pages; all rows and steps have official links`).
+  - Published GitHub Pages URL: https://buffedlizard55-lab.github.io/Koreatrip2/
