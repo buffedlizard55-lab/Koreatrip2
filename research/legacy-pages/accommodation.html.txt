@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accommodation - Korea Itinerary</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <h1>Korea Itinerary (2 Adult Travelers)</h1>
+  <p>Trip window: Oct 31 – Nov 9, 2026 · Seoul (Myeongdong) → Busan (Haeundae). Every row links to an official source where verified.</p>
+</header>
+<nav>
+  <a href="../index.html" class="">Home</a>
+  <a href="../pages/transportation.html" class="">Transportation</a>
+  <a href="../pages/accommodation.html" class="active">Accommodation</a>
+  <a href="../pages/attractions.html" class="">Attractions</a>
+  <a href="../pages/shopping.html" class="">Shopping</a>
+  <a href="../pages/food.html" class="">Food</a>
+  <a href="../pages/cafes.html" class="">Cafes &amp; Bakeries</a>
+  <a href="../pages/markets.html" class="">Markets</a>
+  <a href="../pages/nightlife.html" class="">Nightlife</a>
+  <a href="../pages/busan.html" class="">Busan</a>
+  <a href="../pages/flagged.html" class="">Flagged for Review</a>
+  <a href="../pages/all.html" class="">All Entries</a>
+</nav>
+
+<div class="container">
+<div class="card"><h2>Accommodation</h2><p>2 entries in this category.</p><div class="table-wrap"><table>
+<tr><th>Day</th><th>Item</th><th>Area</th><th>Hours</th><th>Price</th><th>Address</th><th>Notes</th><th>Source</th><th>Verified</th></tr>
+<tr><td>Day 1</td><td>Stanford Hotel Myeongdong</td><td>Myeongdong, Seoul</td><td>Check-in 15:00 / Check-out 12:00</td><td></td><td>84 Namdaemun-ro, Jung-gu, Seoul, 04534</td><td>3-star hotel; 9F-18F; minimum check-in age 19. Official hotel website.</td><td><a class="src" href="https://stanford.webhelper.co.kr/myeongdong/en/contents/list/faq" target="_blank" rel="noopener">https://stanford.webhelper.co.kr/myeongdong/en/contents/list/faq</a></td><td><span class="badge ok">Yes</span></td></tr>
+<tr><td>Day 9</td><td>L7 Haeundae by LOTTE HOTELS</td><td>Haeundae, Busan</td><td>Check-in 15:00 / Check-out 11:00</td><td></td><td>55 Haeun-daero 570beon-gil, Haeundae-gu, Busan, 48094</td><td>4-star lifestyle hotel; 383 rooms; 2-3 min walk to Haeundae Beach. Official Lotte Hotels site.</td><td><a class="src" href="https://www.lottehotel.com/haeundae-l7/en/" target="_blank" rel="noopener">https://www.lottehotel.com/haeundae-l7/en/</a></td><td><span class="badge ok">Yes</span></td></tr>
+</table></div>
+</div>
+</div>
+<footer>Korea Itinerary site · Data verified against official sources where available; unverified items listed on Flagged for Review.</footer>
+</body>
+</html>

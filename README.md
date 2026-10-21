@@ -1,15 +1,26 @@
-# Korea Trip Dashboard
+# Korea, considered.
 
-A mobile-friendly, static GitHub Pages dashboard for a two-person South Korea trip. The itinerary retains user-provided items but separates verified official information from unconfirmed claims. Unknown values are left blank and surfaced on **Flagged for review**.
+A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Busan, working dates November 1–9, 2026. Open [the published site](https://buffedlizard55-lab.github.io/Koreatrip2/) or serve this directory over HTTP (ES modules do not run from `file://`).
 
-## Preview locally
+## Structure
 
-Open `index.html` in a browser, or run `python3 -m http.server 8000` from the repository root.
+- `index.html`: trip overview
+- `pages/days.html`: nine-day plan (Tuesday palace visit moved to Wednesday)
+- `pages/places.html`: filterable line-by-line directory; one official link per row
+- `pages/*-guide.html`: food, cafés, markets, shopping, sights and stays by category
+- `pages/transport.html`: hotel-to-destination routes and official operator links
+- `pages/review.html`: flagged uncertainties, including all unverified rows
+- `data/itinerary.js`: single source for site data; empty location/hour values mean not officially confirmed
+- `research/AUDIT.md`: verification notes and key corrections
+- `COORDINATION.md`: task board and handoff record
 
-## Publish on GitHub Pages
+Source status is deliberately conservative. An “official context · not evidence” link points to a government/tourism area page, **not** a confirmation of a specific shop. No booking information was provided. All regular hours should be reconfirmed for the day of travel.
 
-The workflow in `.github/workflows/pages.yml` deploys the repository root when pushed to `main`. In repository Settings → Pages, select **GitHub Actions** as the build and deployment source. The current working branch is not `main`; merge to main is required for this workflow to publish.
+## Local validation
 
-## Editorial note
+```sh
+node scripts/validate.mjs
+python3 -m http.server 8000 --bind 0.0.0.0
+```
 
-Sources are official operator, government, or Korea Tourism Organization pages where available. Hours and schedules can change; confirm for the actual travel date. The travel year is unresolved and the supplied weekday/date sequence conflicts with 2006. Nothing labeled unverified should be treated as a confirmed reservation, route, price, or business schedule.
+GitHub Pages is configured for **legacy deployment from `main`**. The validation workflow checks and packages the canonical audited pages via `node scripts/build.mjs`, but GitHub Pages publishes the repository root automatically on a main push. Prior-session static data, builder, styling and original pages remain in Git history for provenance. Original generated HTML is also preserved as text under `research/legacy-pages/`. Its former page URLs now redirect to the audited equivalents so the published site does not expose obsolete or unsupported table values. Do not rerun `build_site.py` over the integrated pages. The earlier session’s `app.js` and `styles.css` are retained from PR #1 for provenance; the new pages use `assets/app.js` and `assets/style.css`.
