@@ -16,7 +16,7 @@ const ids=new Set();
 for(const day of days){if(ids.has(day.n))fail(`Duplicate day ${day.n}`);ids.add(day.n);if(!day.steps?.length)fail(`No steps day ${day.n}`);for(const step of day.steps)if(!step[2]?.startsWith('https://'))fail(`Unsourced step day ${day.n}`)}
 if(days.length!==9)fail('Expected nine days');
 for(const [i,r] of routes.entries())if(!r.source?.startsWith('https://'))fail(`Route ${i}: missing official link`);
-const files=['index.html','pages/days.html','pages/places.html','pages/transport.html','pages/review.html'];
+const files=['index.html',...['days','places','transport','review','food-guide','cafes-guide','markets-guide','shopping-guide','sights-guide','stays-guide'].map(n=>`pages/${n}.html`)];
 for(const f of files){if(!existsSync(f)){fail(`Missing ${f}`);continue};const text=readFileSync(f,'utf8');for(const m of text.matchAll(/(?:href|src)="([^"#]+)"/g)){const url=m[1];if(url.startsWith('http')||url.startsWith('data:'))continue;const target=resolve(dirname(f),url.split('#')[0]);if(!existsSync(target))fail(`${f}: broken asset ${url}`)}}
 for(const [key,url] of Object.entries(S))if(!url.startsWith('https://'))fail(`Source ${key} not HTTPS`);
 if(failures.length){console.error(failures.join('\n'));process.exit(1)}

@@ -66,3 +66,9 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 
 - 21 Oct: During the next `git pull --rebase`, PR #2 from session `6c06fb0a` landed on `main`. Resolved second conflicts in `COORDINATION.md`, `index.html`, and `assets/style.css` without removing its category pages/data. Preserved its stylesheet as `assets/previous-style.css`, and pointed its 12 existing category pages there; this session’s dashboard uses `assets/style.css`. The legacy `build_site.py` is retained but must not be rerun over the integrated index.
 
+
+## Final integration audit notes (96a67227)
+
+- Rechecked the combined data after PR #2: its earlier Kyoja “moved branch” assertion conflicts with two addresses on a single official tourism page; the canonical directory now leaves the address blank and flags it. An additional Seongsu Rain Report outlet and official Musinsa Standard, Marge Sherwood and Blue Elephant listings were incorporated; source links are in `research/AUDIT.md`.
+- The prior 12 generated category pages and `data/itinerary.json` are retained on this branch, but the deploy artifact intentionally excludes them because some entries contain third-party-only prices/locations and unresolved date errors. The live site publishes the 11 audited pages built from `data/itinerary.js`. The prior pages still render locally with preserved `assets/previous-style.css`. Do not rerun the older `build_site.py` over the integrated index.
+- Conflict resolutions preserved both earlier session histories and logs. A force-with-lease push is required solely because this fixed branch was rebased onto the moving `main`; no other branch was created or modified.
