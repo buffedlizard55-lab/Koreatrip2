@@ -12,8 +12,8 @@
 |---|---|---|---|---|---|
 | `T1-days-1-3` | Verify Days 1–3 line-by-line (ICN Airport transit, AREX, Limousine Bus, Stanford Hotel Myeongdong, N Seoul Tower & Cable Car, Myeongdong Shopping/Dept Stores/Olive Young/Street Food, Gwangjang & Mangwon Markets, Pig Restaurant 2, Myeongdong Kyoja, Crystal Jade, Hongojib, Sookhee, Gyeongbokgung Palace, Bukchon Hanok Village, Cafe Onion Anguk, Tea House) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-1-3.json`, `verification/days-1-3.md` |
 | `T2-days-4-6` | Verify Days 4–6 line-by-line (Seongsu-dong, Solsot, DDP, Hanjungsun, Caricature, Eternalog, Blue Elephant, Cafe Far Ben, Cafe Onion Seongsu, Rain Report, Jayeondo Sogeumppang, Musinsa Standard, Marge Sherwood, Ader Error, Brandy Melville, Break Silence, Chuncheongol Dakgalbi, Uri Wang Galbitang, Starfield COEX Mall, Soul Market, Gangnam Style Statue, Ikseon-dong & Insadong, Chwihyang / Favorite of Ikseon) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-4-6.json`, `verification/days-4-6.md` |
-| `T3-days-7-9-transit` | Verify Days 7–9 & Public Transit Routing (Itaewon Day 7, Day 8 gap analysis, Day 9 Seoul–Busan KTX, L7 Haeundae by LOTTE, Haeundae Beach & Market, hotel-to-destination transit routes) | `in progress` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-7-9-transit.json`, `verification/days-7-9-transit.md` |
-| `T4-site-integration` | Final integration, combined dataset (`data/verified-itinerary.json`), GitHub Pages dashboard site (`index.html`, category subpages, `flagged.html`), link/build check, PR & merge to `main`, GitHub Pages deployment verification | `unclaimed` | — | — | `index.html`, `itinerary.html`, `transit.html`, `dining.html`, `shopping-cafes.html`, `attractions-hotels.html`, `flagged.html`, `assets/*`, `data/verified-itinerary.json`, `.nojekyll` |
+| `T3-days-7-9-transit` | Verify Days 7–9 & Public Transit Routing (Itaewon Day 7, Day 8 gap analysis, Day 9 Seoul–Busan KTX, L7 Haeundae by LOTTE, Haeundae Beach & Market, hotel-to-destination transit routes) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-7-9-transit.json`, `verification/days-7-9-transit.md` |
+| `T4-site-integration` | Final integration, combined dataset (`data/verified-itinerary.json`), GitHub Pages dashboard site (`index.html`, category subpages, `flagged.html`), link/build check, PR & merge to `main`, GitHub Pages deployment verification | `in progress` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `index.html`, `itinerary.html`, `transit.html`, `dining.html`, `shopping-cafes.html`, `attractions-hotels.html`, `flagged.html`, `assets/*`, `data/verified-itinerary.json`, `.nojekyll` |
 
 ---
 
@@ -40,5 +40,14 @@
     5. **Day 4 Solsot Seongsu Price & Break Time**: Dishes cost 14,000–25,900 KRW (~$10.20–$18.80 USD, not $7–$14) and it closes for weekday break time **15:00–17:00**.
     6. **Day 4 Uri Wang Galbitang Geographic Detour**: Located in Gangdong-gu (`119-9 Seongan-ro`), ~32 min east across the Han River from Seongsu.
     7. **Day 5 Subway to Starfield COEX Mall**: Direct Subway Line 2 from `Euljiro 1(il)-ga Station` (2-min walk from Stanford Hotel) to `Samseong Station` takes **30 minutes with zero transfers** (not 47 minutes).
+- **2026-10-21 (Session `session-9bfbcc9b`)**: Completed `T3-days-7-9-transit` (`data/days-7-9-transit.json`, `verification/days-7-9-transit.md`). Claimed `T4-site-integration`.
+  - **Sources Verified**: VisitKorea (`english.visitkorea.or.kr`), VisitSeoul (`english.visitseoul.net`), VisitBusan (`visitbusan.net`), KORAIL (`letskorail.com`), Lotte Hotels (`lottehotel.com/haeundae-l7/en.html`), Stanford Hotel Myeongdong (`stanford.webhelper.co.kr`).
+  - **Major Irregularities Flagged (Days 7–9)**:
+    1. **Day 7 Incomplete Itaewon Plan**: Day 7 lists only *"Itaewon (Nov 7)"* with no sub-items, while **Pig Restaurant 2 (Itaewon)** is listed on Day 2 (Myeongdong day).
+    2. **Day 8 Completely Blank**: Sunday, Nov 8, 2026 has zero planned items in the source document (left blank in verified fields per strict no-hallucination rules; flagged for review).
+    3. **Day 9 KTX Boarding Rule Discrepancy**: Prompt advises boarding KTX 45 minutes early, whereas Seoul Station KTX platform tracks are announced ~20 minutes before departure and train doors open ~15–20 minutes before departure.
+    4. **Day 9 L7 Haeundae Check-in / Check-out Times**: Official check-in is **15:00** and check-out is **11:00 AM** (1 hour earlier than Stanford Hotel Myeongdong).
+    5. **Day 9 Numbering Irregularities**: Duplicate `1.` and missing `3.` in original Day 9 list (`1, 1, 2, 4, 5, 6, 7, 8`).
+
 
 
