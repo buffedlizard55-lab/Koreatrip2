@@ -1,16 +1,43 @@
-# Shared task board
+# Coordination Board
 
-| Task | Status | Owner | File scope |
+Shared task board for parallel agent sessions.
+
+## Sessions
+
+| Session ID | Branch | Scope | Status |
 |---|---|---|---|
-| Build verified itinerary dashboard and publish-ready GitHub Pages setup | done (deployment requires integration to `main`) | e314c1fc | `index.html`, `app.js`, `styles.css`, `README.md`, `.github/workflows/pages.yml`, `COORDINATION.md` |
+| e314c1fc | arena/e314c1fc-koreatrip2 | Single-page dashboard: `index.html`, `app.js`, `styles.css`, `README.md`, `.github/workflows/pages.yml`, `COORDINATION.md` | merged to main (PR #1) |
+| 6c06fb0a | arena/6c06fb0a-koreatrip2 | Multi-page verified site: `data/itinerary.json`, `pages/*`, `assets/style.css`, `build_site.py`, `index.html`, `COORDINATION.md` | in progress |
 
-## Work log
+## Tasks
 
-- No existing coordination file or claims were present at session start. Initial claim was committed and pushed to the session branch before implementation.
-- Completed a responsive single-page dashboard with anchor subpages/sections for overview, itinerary, transit, hotel bases, food/markets, and Flagged for Review. Day cards are filterable and expandable. Unknown route, price, date, and business values are left blank or explicitly labeled unverified.
-- Added a GitHub Actions Pages deployment workflow for the repository root on `main`, plus setup notes in README. It cannot publish from this working branch until integrated to `main` and Pages is configured for Actions.
-- Sources checked against official sources on Oct 21, 2026: Gyeongbokgung Royal Palace (https://www.royalpalace.go.kr:8443/html/eng_gbg/guide/guide01_tab01.jsp) for closure, seasonal hours, final admission and adult fee; N Seoul Tower official English pages (https://www.nseoultower.co.kr/eng/visit/use.asp and https://www.nseoultower.co.kr/eng/visit/traffic2.asp) for observatory/cable car hours and caveats; AREX (https://www.arex.or.kr/express/info.do?menuNo=MN201503300000000002&langCd=en_US&device=Normal) for live timetable; Korail (https://smart.letskorail.com/ebizbf/EbizBfTicketSearchM.do?lang=EN) for date-specific booking; Korea Tourism Organization Gwangjang Market listing (https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=106345) for address, market/food street hours, Sunday condition; KTO Myeongdong Kyoja listing (https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=99925) for address/hours; Stanford Hotel Myeongdong property page (https://stanford.webhelper.co.kr/myeongdong/en/room/view/12); L7 Haeundae by LOTTE page (https://www.lottehotel.com/prerendered/haeundae-l7/en/about/art-experience/l7/index.html).
-- Findings flagged: (1) supplied dates/weekday labels align with 2026 but text calls out 2006; no year assumed, (2) supplied Tuesday palace day conflicts with official Tuesday closure, (3) Kyoja official listing closes at 21:00 vs late market plan, (4) Gwangjang market is distinct from Myeongdong and has different hours, (5) blank Day 8 and sparse Day 7; flight details missing, (6) most named shops/cafes/restaurants, addresses, prices and hours did not have direct official confirmation in the research and are left unasserted. Hotel supplied names remain labeled unverified pending reservation confirmation.
-- Verification performed: `node --check app.js`; Python HTML parser; `git diff --check`; local static server started on port 8000. No package-based build exists in this bare repository. No external link checker is installed; official links were individually sourced via official pages/search results.
-- No other session claims were found. Shared output was integrated in this sole active session; no parallel branch/worktree was available.
-- PR/merge/deploy: pending integration review. Do not mark publication complete until the Pages workflow succeeds on `main`.
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| T1 | Create COORDINATION.md | done | arena/6c06fb0a-koreatrip2 | COORDINATION.md | initial |
+| T2 | Verify Week1 Seoul itinerary entries (hotels, transport, attractions, restaurants, stores) | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json, pages/*, assets/* | 59 entries; official sources linked per row |
+| T3 | Verify Week1 Day8-9 & Busan entries | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json | Day 8/9 + Busan entries included; unverified flagged |
+| T4 | Build GitHub Pages site (index + subpages) | done | arena/6c06fb0a-koreatrip2 | index.html, pages/*, assets/*, build_site.py | 12 HTML pages; responsive tables |
+| T5 | Final integration: merge, re-verify, build check, publish | in progress | arena/6c06fb0a-koreatrip2 | all | merged origin/main; resolving integration |
+| S1 | Build verified itinerary dashboard and publish-ready GitHub Pages setup | done | e314c1fc | index.html, app.js, styles.css, README.md, .github/workflows/pages.yml, COORDINATION.md | merged to main (PR #1) |
+
+## Verification summary (session 6c06fb0a)
+- Official sources used: VisitKorea/VisitSeoul, Seoul Metropolitan Government, Incheon Airport, Korail, N Seoul Tower, Stanford Hotel, Lotte Hotels, Starfield COEX, DDP, Gyeongbokgung (royal.khs.go.kr via VisitKorea), Bukchon (hanok.seoul.go.kr), Olive Young, Cafe Onion (onionkr.com), Rain Report, Jayeondo, Musinsa Standard, Marge Sherwood, Blue Elephant, Ader Error, Myeongdong Kyoja, Gwangjang/Mangwon markets.
+- Verified rows: 25+; unverified rows left blank and flagged.
+
+## Irregularities flagged
+1. Gyeongbokgung Palace (and guard ceremony) closed on Tuesdays; itinerary schedules them on Tue Nov 3, 2026.
+2. N Seoul Tower itinerary hours (10:00-10:30) corrected to official 10:00-22:30 (weekday) / 10:00-23:00 (weekend).
+3. Olive Young itinerary hours (08:00-24:00) not confirmed; official Myeongdong Town 10:00-22:30.
+4. Day 7 and Day 8 have no detailed plan in the itinerary.
+5. Many small businesses have no official source; hours/addresses left blank and flagged.
+6. AREX itinerary "45 min, $7" approximates the All-Stop service (59-66 min, ₩4,750-₩5,350); Express is 43-51 min, ₩13,000.
+7. Airport bus itinerary "$13" approximates KAL Limousine (₩18,000); standard airport bus ₩17,000.
+8. Myeongdong Kyoja main branch moved to 129 Toegye-ro in 2026; older listings show 29 Myeongdong 10-gil.
+9. Haeundae Market, Haeundae Beach hours unverified.
+10. (from session e314c1fc) Supplied dates/weekday labels align with 2026 but text calls out 2006; travel year unresolved. Hotel supplied names remain labeled unverified pending reservation confirmation.
+
+## Log
+- 2026-10-21: Session e314c1fc merged PR #1 to main (single-page dashboard).
+- 2026-10-21: Session 6c06fb0a started. Claimed T2-T5.
+- 2026-10-21: Data verified and multi-page site built; link check passed.
+- 2026-10-21: Merged origin/main into session branch; resolving integration. Keeping multi-page site plus Pages workflow from main.
