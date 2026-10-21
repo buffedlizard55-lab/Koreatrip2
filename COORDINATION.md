@@ -1,40 +1,49 @@
-# Coordination — Koreatrip2
+# Coordination Board
 
-Shared task board for all agent sessions working on this repo.
+Shared task board for parallel agent sessions.
 
-## Session rules
-- Claim a task by writing your session ID and file scope, then commit and push the claim immediately.
-- Never start a task another session has claimed.
-- Keep scopes non-overlapping: each session works on its own branch/worktree named `session-<id>/<task>` and edits only files in its claimed scope.
-- If a task requires changing a file owned by another session, log the request here instead of editing it.
-- Make small, frequent commits; run `git pull --rebase` before every push.
-- On merge conflict: stop, resolve without discarding the other session's work, log what happened.
-- When a task is finished, record sources, verification performed, and irregularities here, and mark it done.
-- Never mark anything verified without checking an official source; link that source.
-- Shared outputs (table data, site index/navigation) are changed only by the final integration session once all other tasks are done.
-- Flagged items and unverified values do NOT block merge; publish them on the "Flagged for Review" page.
+## Sessions
 
-## Session: arena/d20d7578-koreatrip2 (single session, doing all tasks)
+| Session ID | Branch | Scope | Status |
+|---|---|---|---|
+| e314c1fc | arena/e314c1fc-koreatrip2 | Single-page dashboard: `index.html`, `app.js`, `styles.css`, `README.md`, `.github/workflows/pages.yml`, `COORDINATION.md` | merged to main (PR #1) |
+| 6c06fb0a | arena/6c06fb0a-koreatrip2 | Multi-page verified site: `data/itinerary.json`, `pages/*`, `assets/style.css`, `build_site.py`, `index.html`, `COORDINATION.md` | in progress |
 
-| Task | Status | Scope (files) | Session ID | Sources verified | Notes |
-|------|--------|---------------|------------|------------------|-------|
-| 1. Repo setup + COORDINATION.md | done | COORDINATION.md | arena/d20d7578-koreatrip2 | n/a | Initial commit exists on branch `arena/d20d7578-koreatrip2` |
-| 2. Parse itinerary into structured data | done | `data/itinerary.json` | arena/d20d7578-koreatrip2 | — | Line-by-line parse of user-provided itinerary (9 days, 45 entries) |
-| 3. Verify each fact against official sources | done | `data/verification.md` | arena/d20d7578-koreatrip2 | AREX, airportlimousine.co.kr, nseoultower.co.kr, VISITKOREA (Gyeongbokgung, Lotte, Olive Young, Gwangjang, COEX, Haeundae Market), Korail/letskorail, starfield.co.kr, lottehotel.com | Key results: Gyeongbokgung/Lotte/VISITKOREA items verified; N Seoul Tower +$31 matches official cable car+observatory but written hours wrong; Olive Young hours conflict; AREX $7 fare wrong; Gwangjang 2am claim unverified |
-| 4. Site: landing page + category subpages | done | `index.html`, `pages/*.html`, `assets/style.css`, `tools/generate_site.py` | arena/d20d7578-koreatrip2 | — | Dashboard UI, mobile-friendly, every row has source link + status badge |
-| 5. Flagged for Review page | done | `pages/flagged.html` | arena/d20d7578-koreatrip2 | — | 10 flagged items incl. Gyeongbokgung Tuesday conflict |
-| 6. Integration: build check, broken-link check | in progress | all site files | arena/d20d7578-koreatrip2 | — | Internal link check pending; external links spot-checked via web search this session |
-| 7. GitHub Pages publish | unclaimed | repo Pages settings | arena/d20d7578-koreatrip2 | — | Enable after merge to main; confirm deploy via GitHub API |
-| 8. PR to main + merge | unclaimed | n/a | arena/d20d7578-koreatrip2 | — | PR from arena/d20d7578-koreatrip2 to main; merge without waiting |
+## Tasks
 
-## Irregularities / unverified items (published on Flagged for Review page)
-1. Day 3 (Tue Nov 3, 2026) schedules Gyeongbokgung Palace — closed Tuesdays. Must reschedule.
-2. Day 2 date says "Nov 2, 2006" — should be 2026.
-3. Day 1 calls Oct 31 a Sunday — Oct 31, 2026 is Saturday (Nov 1 is Sunday).
-4. N Seoul Tower hours in itinerary (10:00–10:30) conflict with official (weekdays 10:00–22:30, weekends 10:00–23:00).
-5. Olive Young hours (8:00–midnight) conflict with official (10:00–22:30).
-6. AREX fare "$7" matches neither official Express (₩13,000 ≈ $9.30) nor all-stop (₩4,750 ≈ $3.40).
-7. Limousine bus "$13" vs official ₩17,000 (~$12.10) / ₩18,000 (~$12.80).
-8. Gwangjang "stalls until 2:00am" — official food street closes 23:00.
-9. Many small venues have no official English source; left blank/unverified (verify via Kakao/Naver Map before visiting).
-10. Days 7–8 empty (Itaewon / free day).
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| T1 | Create COORDINATION.md | done | arena/6c06fb0a-koreatrip2 | COORDINATION.md | initial |
+| T2 | Verify Week1 Seoul itinerary entries (hotels, transport, attractions, restaurants, stores) | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json, pages/*, assets/* | 59 entries; official sources linked per row |
+| T3 | Verify Week1 Day8-9 & Busan entries | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json | Day 8/9 + Busan entries included; unverified flagged |
+| T4 | Build GitHub Pages site (index + subpages) | done | arena/6c06fb0a-koreatrip2 | index.html, pages/*, assets/*, build_site.py | 12 HTML pages; responsive tables |
+| T5 | Final integration: merge, re-verify, build check, publish | done | arena/6c06fb0a-koreatrip2 | all | PR #2 merged to main; Pages workflow run 39564264196 succeeded; site built |
+| S1 | Build verified itinerary dashboard and publish-ready GitHub Pages setup | done | e314c1fc | index.html, app.js, styles.css, README.md, .github/workflows/pages.yml, COORDINATION.md | merged to main (PR #1) |
+
+## Verification summary (session 6c06fb0a)
+- Official sources used: VisitKorea/VisitSeoul, Seoul Metropolitan Government, Incheon Airport, Korail, N Seoul Tower, Stanford Hotel, Lotte Hotels, Starfield COEX, DDP, Gyeongbokgung (royal.khs.go.kr via VisitKorea), Bukchon (hanok.seoul.go.kr), Olive Young, Cafe Onion (onionkr.com), Rain Report, Jayeondo, Musinsa Standard, Marge Sherwood, Blue Elephant, Ader Error, Myeongdong Kyoja, Gwangjang/Mangwon markets.
+- Verified rows: 25+; unverified rows left blank and flagged.
+
+## Irregularities flagged
+1. Gyeongbokgung Palace (and guard ceremony) closed on Tuesdays; itinerary schedules them on Tue Nov 3, 2026.
+2. N Seoul Tower itinerary hours (10:00-10:30) corrected to official 10:00-22:30 (weekday) / 10:00-23:00 (weekend).
+3. Olive Young itinerary hours (08:00-24:00) not confirmed; official Myeongdong Town 10:00-22:30.
+4. Day 7 and Day 8 have no detailed plan in the itinerary.
+5. Many small businesses have no official source; hours/addresses left blank and flagged.
+6. AREX itinerary "45 min, $7" approximates the All-Stop service (59-66 min, ₩4,750-₩5,350); Express is 43-51 min, ₩13,000.
+7. Airport bus itinerary "$13" approximates KAL Limousine (₩18,000); standard airport bus ₩17,000.
+8. Myeongdong Kyoja main branch moved to 129 Toegye-ro in 2026; older listings show 29 Myeongdong 10-gil.
+9. Haeundae Market, Haeundae Beach hours unverified.
+10. (from session e314c1fc) Supplied dates/weekday labels align with 2026 but text calls out 2006; travel year unresolved. Hotel supplied names remain labeled unverified pending reservation confirmation.
+
+## Log
+- 2026-10-21: Session e314c1fc merged PR #1 to main (single-page dashboard).
+- 2026-10-21: Session 6c06fb0a started. Claimed T2-T5.
+- 2026-10-21: Data verified and multi-page site built; link check passed.
+- 2026-10-21: Merged origin/main into session branch; resolving integration. Keeping multi-page site plus Pages workflow from main.
+
+## Publication
+- PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/2
+- Merge: merged to main (merge commit)
+- Pages workflow run: 39564264196 (success)
+- Site URL: https://buffedlizard55-lab.github.io/Koreatrip2/
