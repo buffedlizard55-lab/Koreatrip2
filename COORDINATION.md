@@ -47,3 +47,20 @@ Shared task board for parallel agent sessions.
 - Merge: merged to main (merge commit)
 - Pages workflow run: 39564264196 (success)
 - Site URL: https://buffedlizard55-lab.github.io/Koreatrip2/
+
+## Session 96a67227 work board
+
+# Coordination
+
+Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is fixed by the environment). This repository had no task board or other claims when work began. Only this session is active here; no parallel branches are being created.
+
+| Task | Status | Owner | File scope | Sources / verification / irregularities |
+|---|---|---|---|---|
+| Research and itinerary data | In progress | 96a67227 | `data/**`, `research/**` | Official sources only; unconfirmed details will be flagged. |
+| Site design and implementation | Unclaimed | — | `index.html`, `pages/**`, `assets/**`, `scripts/**`, `.github/**`, `package.json`, `README.md` | — |
+| Final integration, audit, publication | Unclaimed | — | All files after research and site tasks finish; `COORDINATION.md` | Recheck data, links, build, Pages, PR. |
+
+## Requests / handoffs
+
+None.
+
