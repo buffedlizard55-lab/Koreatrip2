@@ -8,6 +8,7 @@ for(const [i,p] of places.entries()){
  if(!['verified','partial','unverified'].includes(p.status))fail(`Row ${i}: invalid status`);
  if(!p.name||!p.type||!p.detail)fail(`Row ${i}: missing identifying info`);
  if(!p.source?.startsWith('https://'))fail(`Row ${i}: missing HTTPS official source`);
+ if(p.extra && !p.extra.startsWith('https://'))fail(`Row ${i}: invalid extra source`);
  if(p.status==='unverified'&&(p.where||p.hours))fail(`Row ${i}: unverified fields must be blank`);
  if(p.sourceKind==='context'&&p.status!=='unverified')fail(`Row ${i}: context link cannot verify row`);
 }
