@@ -56,8 +56,8 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 
 | Task | Status | Owner | File scope | Sources / verification / irregularities |
 |---|---|---|---|---|
-| Research and itinerary data | In progress | 96a67227 | `data/**`, `research/**` | Official sources only; unconfirmed details will be flagged. |
-| Site design and implementation | Unclaimed | — | `index.html`, `pages/**`, `assets/**`, `scripts/**`, `.github/**`, `package.json`, `README.md` | — |
+| Research and itinerary data | Done | 96a67227 | `data/**`, `research/**` | 21 Oct: row-by-row source audit; methods/sources in `research/AUDIT.md`. Irregularities (Tuesday palace closure, year typo, timings, mismatched districts, unknown venues) published as unverified/partial entries. |
+| Site design and implementation | In progress | 96a67227 | `index.html`, `pages/**`, `assets/**`, `scripts/**`, `.github/**`, `package.json`, `README.md` | — |
 | Final integration, audit, publication | Unclaimed | — | All files after research and site tasks finish; `COORDINATION.md` | Recheck data, links, build, Pages, PR. |
 
 ## Requests / handoffs
