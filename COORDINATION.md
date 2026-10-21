@@ -47,3 +47,34 @@ Shared task board for parallel agent sessions.
 - Merge: merged to main (merge commit)
 - Pages workflow run: 39564264196 (success)
 - Site URL: https://buffedlizard55-lab.github.io/Koreatrip2/
+
+## Session 96a67227 work board
+
+# Coordination
+
+Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is fixed by the environment). This checkout had no task board when work began. A separate Arena session later merged PR #1 into `main`; this branch remains the fixed Arena branch, not a newly named session branch.
+
+| Task | Status | Owner | File scope | Sources / verification / irregularities |
+|---|---|---|---|---|
+| Research and itinerary data | Done | 96a67227 | `data/**`, `research/**` | 21 Oct: row-by-row source audit; methods/sources in `research/AUDIT.md`. Irregularities (Tuesday palace closure, year typo, timings, mismatched districts, unknown venues) published as unverified/partial entries. |
+| Site design and implementation | Done | 96a67227 | `index.html`, `pages/**`, `assets/**`, `scripts/**`, `.github/**`, `README.md` | 21 Oct: 5 static pages, filterable directory and Pages workflow. Smoke-rendered all pages and checked local links; `node scripts/validate.mjs` passes. |
+| Final integration, audit, publication | In progress | 96a67227 | All files after research and site tasks finish; `COORDINATION.md` | Recheck data, links, build, Pages, PR. |
+
+## Requests / handoffs
+
+- 21 Oct: `main` advanced during this work when PR #1 from session `e314c1fc` merged. Rebased this branch onto that merge. Conflicts in `COORDINATION.md`, `index.html`, `README.md`, and the Pages workflow were resolved by retaining the earlier session’s log and `app.js`/`styles.css`, while integrating the new multi-page dashboard, audit and validation workflow. No earlier commits were discarded; the original dashboard remains in Git history.
+
+- 21 Oct: During the next `git pull --rebase`, PR #2 from session `6c06fb0a` landed on `main`. Resolved second conflicts in `COORDINATION.md`, `index.html`, and `assets/style.css` without removing its category pages/data. Preserved its stylesheet as `assets/previous-style.css`, and pointed its 12 existing category pages there; this session’s dashboard uses `assets/style.css`. The legacy `build_site.py` is retained but must not be rerun over the integrated index.
+
+
+## Final integration audit notes (96a67227)
+
+- Rechecked the combined data after PR #2: its earlier Kyoja “moved branch” assertion conflicts with two addresses on a single official tourism page; the canonical directory now leaves the address blank and flags it. An additional Seongsu Rain Report outlet and official Musinsa Standard, Marge Sherwood and Blue Elephant listings were incorporated; source links are in `research/AUDIT.md`.
+- The prior 12 generated category pages and `data/itinerary.json` are retained on this branch, but the deploy artifact intentionally excludes them because some entries contain third-party-only prices/locations and unresolved date errors. The live site publishes the 11 audited pages built from `data/itinerary.js`. The prior pages still render locally with preserved `assets/previous-style.css`. Do not rerun the older `build_site.py` over the integrated index.
+- Conflict resolutions preserved both earlier session histories and logs. A force-with-lease push is required solely because this fixed branch was rebased onto the moving `main`; no other branch was created or modified.
+
+- Publication configuration check: GitHub Pages API reports `build_type: legacy`, source `main:/`, and a built site. Attempting to switch to workflow mode returned API 403 (integration lacks Pages-write settings access). The prior action-based deploy had a failed run after PR #3 even though legacy `pages-build-deployment` succeeded. To prevent competing deploys, this branch makes the workflow validation-only; Pages auto-publishes root on merge. `build/` is a checked canonical preview, not the Pages artifact. The navigation exposes only the audited views; older merged pages remain available by direct URL for historical comparison and may contain unverified claims.
+
+- Final root-publish safeguard: the previous static category URLs were converted to accessible redirects to their audited equivalents. Their original HTML is preserved under `research/legacy-pages/` and in PR #2 Git history; `data/itinerary.json`, `build_site.py`, and preserved styles remain in the repository. This prevents a Pages legacy root deployment from exposing third-party-only/contradictory table fields in the earlier generated HTML.
+
+- PR #5: https://github.com/buffedlizard55-lab/Koreatrip2/pull/5 — integration candidate; check run [39564824249](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39564824249) passed validation/build. Merge result and Pages publication to be recorded after merge.
