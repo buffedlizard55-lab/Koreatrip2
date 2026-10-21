@@ -22,4 +22,4 @@ node scripts/validate.mjs
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
-The Pages workflow validates and publishes static files without a frontend build tool.
+The Pages workflow validates and publishes static files without a frontend build tool. The earlier session’s `app.js` and `styles.css` are retained from PR #1 for provenance; the new pages use `assets/app.js` and `assets/style.css`.

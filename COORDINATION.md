@@ -52,7 +52,7 @@ Shared task board for parallel agent sessions.
 
 # Coordination
 
-Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is fixed by the environment). This repository had no task board or other claims when work began. Only this session is active here; no parallel branches are being created.
+Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is fixed by the environment). This checkout had no task board when work began. A separate Arena session later merged PR #1 into `main`; this branch remains the fixed Arena branch, not a newly named session branch.
 
 | Task | Status | Owner | File scope | Sources / verification / irregularities |
 |---|---|---|---|---|
@@ -62,5 +62,7 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 
 ## Requests / handoffs
 
-None.
+- 21 Oct: `main` advanced during this work when PR #1 from session `e314c1fc` merged. Rebased this branch onto that merge. Conflicts in `COORDINATION.md`, `index.html`, `README.md`, and the Pages workflow were resolved by retaining the earlier session’s log and `app.js`/`styles.css`, while integrating the new multi-page dashboard, audit and validation workflow. No earlier commits were discarded; the original dashboard remains in Git history.
+
+- 21 Oct: During the next `git pull --rebase`, PR #2 from session `6c06fb0a` landed on `main`. Resolved second conflicts in `COORDINATION.md`, `index.html`, and `assets/style.css` without removing its category pages/data. Preserved its stylesheet as `assets/previous-style.css`, and pointed its 12 existing category pages there; this session’s dashboard uses `assets/style.css`. The legacy `build_site.py` is retained but must not be rerun over the integrated index.
 
