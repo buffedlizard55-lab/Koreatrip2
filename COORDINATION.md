@@ -17,7 +17,7 @@ Shared task board for parallel agent sessions.
 | T2 | Verify Week1 Seoul itinerary entries (hotels, transport, attractions, restaurants, stores) | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json, pages/*, assets/* | 59 entries; official sources linked per row |
 | T3 | Verify Week1 Day8-9 & Busan entries | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json | Day 8/9 + Busan entries included; unverified flagged |
 | T4 | Build GitHub Pages site (index + subpages) | done | arena/6c06fb0a-koreatrip2 | index.html, pages/*, assets/*, build_site.py | 12 HTML pages; responsive tables |
-| T5 | Final integration: merge, re-verify, build check, publish | in progress | arena/6c06fb0a-koreatrip2 | all | merged origin/main; resolving integration |
+| T5 | Final integration: merge, re-verify, build check, publish | done | arena/6c06fb0a-koreatrip2 | all | PR #2 merged to main; Pages workflow run 39564264196 succeeded; site built |
 | S1 | Build verified itinerary dashboard and publish-ready GitHub Pages setup | done | e314c1fc | index.html, app.js, styles.css, README.md, .github/workflows/pages.yml, COORDINATION.md | merged to main (PR #1) |
 
 ## Verification summary (session 6c06fb0a)
@@ -41,3 +41,9 @@ Shared task board for parallel agent sessions.
 - 2026-10-21: Session 6c06fb0a started. Claimed T2-T5.
 - 2026-10-21: Data verified and multi-page site built; link check passed.
 - 2026-10-21: Merged origin/main into session branch; resolving integration. Keeping multi-page site plus Pages workflow from main.
+
+## Publication
+- PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/2
+- Merge: merged to main (merge commit)
+- Pages workflow run: 39564264196 (success)
+- Site URL: https://buffedlizard55-lab.github.io/Koreatrip2/
