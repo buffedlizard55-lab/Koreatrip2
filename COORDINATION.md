@@ -10,7 +10,7 @@ Shared task board for parallel agent sessions.
 | 6c06fb0a | arena/6c06fb0a-koreatrip2 | Multi-page verified site: `data/itinerary.json`, `pages/*`, `assets/style.css`, `build_site.py`, `index.html`, `COORDINATION.md` | merged to main (PR #2) |
 | 96a67227 | arena/96a67227-koreatrip2 | Audited multi-page directory: `data/itinerary.js`, `research/AUDIT.md`, `pages/*`, `scripts/*` | merged to main (PR #5) |
 | d20d7578 | arena/d20d7578-koreatrip2 | Verification markdown & generator: `data/verification.md`, `pages/day-by-day.html`, `pages/activities.html`, `tools/generate_site.py` | merged to main (PR #4) |
-| 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + cross-session integration & verification audit | in progress |
+| 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + cross-session integration & verification audit | ready to merge |
 
 ## Tasks
 
@@ -23,7 +23,7 @@ Shared task board for parallel agent sessions.
 | T5 | Final integration: merge, re-verify, build check, publish | done | arena/6c06fb0a-koreatrip2 | all | PR #2 merged to main; Pages workflow run 39564264196 succeeded; site built |
 | S1 | Build verified itinerary dashboard and publish-ready GitHub Pages setup | done | e314c1fc | index.html, app.js, styles.css, README.md, .github/workflows/pages.yml, COORDINATION.md | merged to main (PR #1) |
 | S535004bc-1 | Verify Hotels, Transport, Days 1–9 & 18 Flagged Irregularities from official sources | done | 535004bc (arena/535004bc-koreatrip2) | `data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json` | Every row linked to official source; unverified values left blank |
-| S535004bc-2 | Final Cross-Session Integration, Line-by-Line Re-verification & Link Audit | in progress | 535004bc (arena/535004bc-koreatrip2) | `index.html`, `pages/*`, `data/*`, `scripts/validate.mjs`, `COORDINATION.md` | Preserve all prior session files & integrate new official sources found |
+| S535004bc-2 | Final Cross-Session Integration, Line-by-Line Re-verification & Link Audit | done | 535004bc (arena/535004bc-koreatrip2) | `data/itinerary.js`, `assets/app.js`, `pages/activities.html`, `pages/day-by-day.html`, `research/AUDIT.md`, `research/legacy-pages/*`, `COORDINATION.md` | Integrated official brand sources (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours); archived PR #4 static pages & redirected to audited views; `node scripts/validate.mjs` and 24-file link audit pass |
 
 ## Verification summary (session 6c06fb0a)
 - Official sources used: VisitKorea/VisitSeoul, Seoul Metropolitan Government, Incheon Airport, Korail, N Seoul Tower, Stanford Hotel, Lotte Hotels, Starfield COEX, DDP, Gyeongbokgung (royal.khs.go.kr via VisitKorea), Bukchon (hanok.seoul.go.kr), Olive Young, Cafe Onion (onionkr.com), Rain Report, Jayeondo, Musinsa Standard, Marge Sherwood, Blue Elephant, Ader Error, Myeongdong Kyoja, Gwangjang/Mangwon markets.

@@ -56,12 +56,15 @@ function reviewPage(){ const flagged=places.filter(p=>p.status==='unverified'); 
  <div class="issue-list">
  ${[
  ['01','Year & flight dates','The weekday sequence fits Nov 1–9, 2026, not the “Nov 2, 2006” typo. Oct 31 departure / Nov 1 arrival needs a ticket to confirm.',S.sfo],
- ['02','Palace on Tuesday','Nov 3 is Tuesday and the palace is normally closed. The plan swaps Seongsu to Tuesday and Gyeongbokgung to Wednesday. The 2026 free-admission notice excludes closing days.',S.palace],
- ['03','Bukchon access','The restricted residential Red Zone permits tourist visits only 10:00–17:00; do not plan an evening visit.',S.bukchon],
- ['04','Prices in dollars','$7 AREX, $13 bus and $31 tower bundle are not operator-confirmed USD prices. Compare linked KRW fares instead.',S.towerPrice],
- ['05','Neighborhood mix-ups','DDP is in Dongdaemun, not Seongsu. Rain Report Croissant is listed in Seongsu; Rain Report Rainbow is a separate Ikseon-dong outlet.',S.rain],
- ['06','Unbooked rail & hotels','KTX duration/boarding, hotel reservations, flight, and L7 check-in time cannot be confirmed from the source plan.',S.korail],
- ['07','Conflicting Kyoja addresses','The official Seoul and Korea tourism listings disagree on the branch address. The directory intentionally leaves it blank until the desired branch is confirmed.',S.kyoja]
+ ['02','Palace on Tuesday','Nov 3 is Tuesday and Gyeongbokgung Palace + Guard Ceremony are closed Tuesdays. The plan swaps Seongsu to Tuesday and Gyeongbokgung to Wednesday. The 2026 free-admission notice excludes closing days.',S.palace],
+ ['03','Bukchon access & fine','The restricted residential Red Zone (Bukchon-ro 11-gil) permits tourist visits only 10:00–17:00 with a ₩100,000 fine after 17:00; do not plan an evening visit.',S.bukchon],
+ ['04','Prices in dollars & hours','$7 AREX (official Express ₩13,000), $13 bus (official Route 6015 ₩17,000), $31 tower bundle (Observatory ₩29,000 + Cable Car ₩15,000 RT), and “10:00–10:30” tower hours (official 10:00–22:30/23:00) are corrected.',S.towerPrice],
+ ['05','Neighborhood mix-ups','DDP is Zaha Hadid’s cultural complex in Dongdaemun, not Seongsu converted warehouses. Rain Report Rainbow (33-7 Supyo-ro 28-gil) is in Ikseon-dong, not Insadong.',S.rain],
+ ['06','Duplicate & misplaced venues','“Chwihyang” and “Favorite of Ikseon” both refer to Ikseon Chwihyang (익선취향), and “favorite of Ikseon-dong” was erroneously pasted onto Day 4’s Uri Wang Galbitang. Jayeondo Salt Bread is listed twice (Seongsu & Ikseon).',S.ikseon],
+ ['07','Olive Young & Dept Store hours','Olive Young Myeongdong Town operates 10:00–22:30 daily (not 08:00–midnight). Lotte & Shinsegae extended hours (10:30–20:30) apply Fri–Sun, not Sat–Sun only.',S.oliveKto],
+ ['08','Conflicting Kyoja addresses','Official Seoul and Korea tourism listings show both 29 Myeongdong 10-gil and 129 Toegye-ro ( plus 8 Myeongdong 10-gil branch). The directory leaves the exact street address blank until the desired branch is chosen.',S.kyoja],
+ ['09','Unprogrammed days & detours','Day 7 (Itaewon) and Day 8 (Sunday) have no scheduled activities; consider moving Day 2’s Itaewon dinner (Pig Restaurant 2) or distant detours to those days.',S.itaewon],
+ ['10','KTX boarding & bookings','KTX track/platform assignments are announced 15–20 minutes prior to departure at Seoul Station (you cannot board 45 minutes early). Flight, rail, and hotel bookings remain unconfirmed.',S.korail]
  ].map(([n,h,t,url])=>`<article class="issue"><span class="issue-num">${n}</span><div><h3>${h}</h3><p>${t}</p></div>${src(url)}</article>`).join('')}</div>
  <div class="section-title review-title"><div><p class="eyebrow">FULL QUEUE</p><h2>Unverified entries</h2></div><span class="muted">Blank hours & locations are intentional.</span></div>
  ${placesTable(flagged)}<p class="fine-print">For a row marked “Official context · not evidence,” the link is included for neighborhood orientation only. It must not be interpreted as verification of the named shop or restaurant.</p>`); }
