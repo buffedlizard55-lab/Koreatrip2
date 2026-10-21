@@ -1,53 +1,127 @@
-# COORDINATION.md — Shared Task Board & Verification Log
+# Coordination Board
 
-**Repository:** `buffedlizard55-lab/Koreatrip2`  
-**Active Session Branch:** `arena/9bfbcc9b-koreatrip2` (Session ID: `session-9bfbcc9b`)  
-**Last Updated:** 2026-10-21 UTC  
+Shared task board for parallel agent sessions.
+
+## Sessions
+
+| Session ID | Branch | Scope | Status |
+|---|---|---|---|
+| e314c1fc | arena/e314c1fc-koreatrip2 | Single-page dashboard: `index.html`, `app.js`, `styles.css`, `README.md`, `.github/workflows/pages.yml`, `COORDINATION.md` | merged to main (PR #1) |
+| 6c06fb0a | arena/6c06fb0a-koreatrip2 | Multi-page verified site: `data/itinerary.json`, `pages/*`, `assets/style.css`, `build_site.py`, `index.html`, `COORDINATION.md` | merged to main (PR #2) |
+| d20d7578 | arena/d20d7578-koreatrip2 | Verification worksheet, day-by-day and activities pages, generator | merged to main (PR #4); earlier pages archived and redirected after audit |
+| 96a67227 | arena/96a67227-koreatrip2 | Canonical 11-page dashboard, source audit, validation and legacy URL migration | merged to main (PRs #5, #7, #8) |
+| 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + official brand source integration (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours) | merged to main (PR #9) |
+| 9bfbcc9b | arena/9bfbcc9b-koreatrip2 | Line-by-line verification reports (`verification/days-*.md`), structured datasets (`data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/verified-itinerary.json`), official brand source integration (`hongojib.com`, `en.adererror.com`, `kr.brandymelville.com`, Gwangjang Gohyang Kalguksu Monday closure) | ready for PR & merge to main |
+
+## Tasks
+
+| ID | Task | Status | Owner | Files | Notes |
+|----|------|--------|-------|-------|-------|
+| T1 | Create COORDINATION.md | done | arena/6c06fb0a-koreatrip2 | COORDINATION.md | initial |
+| T2 | Verify Week1 Seoul itinerary entries (hotels, transport, attractions, restaurants, stores) | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json, pages/*, assets/* | 59 entries; official sources linked per row |
+| T3 | Verify Week1 Day8-9 & Busan entries | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json | Day 8/9 + Busan entries included; unverified flagged |
+| T4 | Build GitHub Pages site (index + subpages) | done | arena/6c06fb0a-koreatrip2 | index.html, pages/*, assets/*, build_site.py | 12 HTML pages; responsive tables |
+| T5 | Final integration: merge, re-verify, build check, publish | done | arena/6c06fb0a-koreatrip2 | all | PR #2 merged to main; Pages workflow run 39564264196 succeeded; site built |
+| S1 | Build verified itinerary dashboard and publish-ready GitHub Pages setup | done | e314c1fc | index.html, app.js, styles.css, README.md, .github/workflows/pages.yml, COORDINATION.md | merged to main (PR #1) |
+| S535004bc-1 | Verify Hotels, Transport, Days 1–9 & 18 Flagged Irregularities from official sources | done | 535004bc (arena/535004bc-koreatrip2) | `data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json` | Every row linked to official source; unverified values left blank |
+| S535004bc-2 | Final Cross-Session Integration, Line-by-Line Re-verification & Link Audit | done | 535004bc (arena/535004bc-koreatrip2) | `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md`, `COORDINATION.md` | Integrated official brand sources (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours); `node scripts/validate.mjs` and 24-file link audit pass |
+| T1-days-1-3 | Verify Days 1–3 line-by-line (ICN Airport transit, AREX, Limousine Bus, Stanford Hotel Myeongdong, N Seoul Tower & Cable Car, Myeongdong Shopping/Dept Stores/Olive Young/Street Food, Gwangjang & Mangwon Markets, Pig Restaurant 2, Myeongdong Kyoja, Crystal Jade, Hongojib, Sookhee, Gyeongbokgung Palace, Bukchon Hanok Village, Cafe Onion Anguk, Tea House) | done | session-9bfbcc9b (`arena/9bfbcc9b-koreatrip2`) | `data/days-1-3-session-9bfbcc9b.json`, `verification/days-1-3.md` | 17 items verified line-by-line with official links |
+| T2-days-4-6 | Verify Days 4–6 line-by-line (Seongsu-dong, Solsot, DDP, Hanjungsun, Caricature, Eternalog, Blue Elephant, Cafe Far Ben, Cafe Onion Seongsu, Rain Report, Jayeondo Sogeumppang, Musinsa Standard, Marge Sherwood, Ader Error, Brandy Melville, Break Silence, Chuncheongol Dakgalbi, Uri Wang Galbitang, Starfield COEX Mall, Soul Market, Gangnam Style Statue, Ikseon-dong & Insadong, Chwihyang / Favorite of Ikseon) | done | session-9bfbcc9b (`arena/9bfbcc9b-koreatrip2`) | `data/days-4-6.json`, `verification/days-4-6.md` | 23 items verified line-by-line with official links |
+| T3-days-7-9-transit | Verify Days 7–9 & Public Transit Routing (Itaewon Day 7, Day 8 gap analysis, Day 9 Seoul–Busan KTX, L7 Haeundae by LOTTE, Haeundae Beach & Market, hotel-to-destination transit routes) | done | session-9bfbcc9b (`arena/9bfbcc9b-koreatrip2`) | `data/days-7-9-transit.json`, `verification/days-7-9-transit.md` | 13 items & 14-route hotel transit matrix verified |
+| T4-site-integration | Cross-session integration of primary official sources (`hongojib.com`, `en.adererror.com`, `kr.brandymelville.com`, VisitKorea Gohyang Kalguksu Monday closure) into `data/itinerary.js` & `research/AUDIT.md`, preserve `verification/*.md` and `data/verified-itinerary.json`, validate & deploy via PR to `main` | done | session-9bfbcc9b (`arena/9bfbcc9b-koreatrip2`) | `data/itinerary.js`, `data/verified-itinerary.json`, `research/AUDIT.md`, `README.md`, `COORDINATION.md` | `node scripts/validate.mjs` & `node scripts/build.mjs` pass |
+
+## Verification summary (session 6c06fb0a)
+- Official sources used: VisitKorea/VisitSeoul, Seoul Metropolitan Government, Incheon Airport, Korail, N Seoul Tower, Stanford Hotel, Lotte Hotels, Starfield COEX, DDP, Gyeongbokgung (royal.khs.go.kr via VisitKorea), Bukchon (hanok.seoul.go.kr), Olive Young, Cafe Onion (onionkr.com), Rain Report, Jayeondo, Musinsa Standard, Marge Sherwood, Blue Elephant, Ader Error, Myeongdong Kyoja, Gwangjang/Mangwon markets.
+- Verified rows: 25+; unverified rows left blank and flagged.
+
+## Irregularities flagged
+1. Gyeongbokgung Palace (and guard ceremony) closed on Tuesdays; itinerary schedules them on Tue Nov 3, 2026.
+2. N Seoul Tower itinerary hours (10:00-10:30) corrected to official 10:00-22:30 (weekday) / 10:00-23:00 (weekend).
+3. Olive Young itinerary hours (08:00-24:00) not confirmed; official Myeongdong Town 10:00-22:30.
+4. Day 7 and Day 8 have no detailed plan in the itinerary.
+5. Many small businesses have no official source; hours/addresses left blank and flagged.
+6. AREX itinerary "45 min, $7" matches neither service; Express is 43-51 min, ₩13,000, while All-Stop has a different fare and duration.
+7. Airport bus itinerary "$13" approximates KAL Limousine (₩18,000); standard airport bus ₩17,000.
+8. Myeongdong Kyoja official tourism listings conflict on the address (29 Myeongdong 10-gil versus 129 Toegye-ro); do not assert a move until the branch is confirmed.
+9. Haeundae Market official tourism listing gives 09:00–22:00 (shops vary); beach service hours differ from shoreline access.
+10. (from session e314c1fc) Supplied dates/weekday labels align with 2026 but text calls out 2006; travel year unresolved. Hotel supplied names remain labeled unverified pending reservation confirmation.
+
+## Log
+- 2026-10-21: Session e314c1fc merged PR #1 to main (single-page dashboard).
+- 2026-10-21: Session 6c06fb0a started. Claimed T2-T5.
+- 2026-10-21: Data verified and multi-page site built; link check passed.
+- 2026-10-21: Merged origin/main into session branch; resolving integration. Keeping multi-page site plus Pages workflow from main.
+
+## Publication
+- PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/2
+- Merge: merged to main (merge commit)
+- Pages workflow run: 39564264196 (success)
+- Site URL: https://buffedlizard55-lab.github.io/Koreatrip2/
+
+## Session 96a67227 work board
+
+# Coordination
+
+Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is fixed by the environment). This checkout had no task board when work began. A separate Arena session later merged PR #1 into `main`; this branch remains the fixed Arena branch, not a newly named session branch.
+
+| Task | Status | Owner | File scope | Sources / verification / irregularities |
+|---|---|---|---|---|
+| Research and itinerary data | Done | 96a67227 | `data/**`, `research/**` | 21 Oct: row-by-row source audit; methods/sources in `research/AUDIT.md`. Irregularities (Tuesday palace closure, year typo, timings, mismatched districts, unknown venues) published as unverified/partial entries. |
+| Site design and implementation | Done | 96a67227 | `index.html`, `pages/**`, `assets/**`, `scripts/**`, `.github/**`, `README.md` | 21 Oct: 5 static pages, filterable directory and Pages workflow. Smoke-rendered all pages and checked local links; `node scripts/validate.mjs` passes. |
+| Final integration, audit, publication | Done | 96a67227 | All files after research and site tasks finish; `COORDINATION.md` | PR #5 merged as `2ec80bd`; post-PR #4 safeguard PR #7 merged as `b061712`; validation and Pages deploy passed, live routes checked. |
+
+## Requests / handoffs
+
+- 21 Oct: `main` advanced during this work when PR #1 from session `e314c1fc` merged. Rebased this branch onto that merge. Conflicts in `COORDINATION.md`, `index.html`, `README.md`, and the Pages workflow were resolved by retaining the earlier session’s log and `app.js`/`styles.css`, while integrating the new multi-page dashboard, audit and validation workflow. No earlier commits were discarded; the original dashboard remains in Git history.
+
+- 21 Oct: During the next `git pull --rebase`, PR #2 from session `6c06fb0a` landed on `main`. Resolved second conflicts in `COORDINATION.md`, `index.html`, and `assets/style.css` without removing its category pages/data. Preserved its stylesheet as `assets/previous-style.css`, and pointed its 12 existing category pages there; this session’s dashboard uses `assets/style.css`. The legacy `build_site.py` is retained but must not be rerun over the integrated index.
+
+
+## Final integration audit notes (96a67227)
+
+- Rechecked the combined data after PR #2: its earlier Kyoja “moved branch” assertion conflicts with two addresses on a single official tourism page; the canonical directory now leaves the address blank and flags it. An additional Seongsu Rain Report outlet and official Musinsa Standard, Marge Sherwood and Blue Elephant listings were incorporated; source links are in `research/AUDIT.md`.
+- The prior generated category pages and `data/itinerary.json` are retained for provenance, but the validated `build/` artifact excludes them because some entries contain third-party-only prices/locations and unresolved date errors. Legacy Pages publishes the repository root; the live navigation publishes the 11 audited pages built from `data/itinerary.js`. The prior pages are now preserved as text in `research/legacy-pages/` and their former URLs redirect to the audited pages. Do not rerun the older `build_site.py` over the integrated index.
+- Conflict resolutions preserved both earlier session histories and logs. A force-with-lease push is required solely because this fixed branch was rebased onto the moving `main`; no other branch was created or modified.
+
+- Publication configuration check: GitHub Pages API reports `build_type: legacy`, source `main:/`, and a built site. Attempting to switch to workflow mode returned API 403 (integration lacks Pages-write settings access). The prior action-based deploy had a failed run after PR #3 even though legacy `pages-build-deployment` succeeded. To prevent competing deploys, this branch makes the workflow validation-only; Pages auto-publishes root on merge. `build/` is a checked canonical preview, not the Pages artifact. The navigation exposes only audited views; former generated page URLs redirect to audited equivalents.
+
+- Final root-publish safeguard: the previous static category URLs were converted to accessible redirects to their audited equivalents. Their original HTML is preserved under `research/legacy-pages/` and in PR #2 Git history; `data/itinerary.json`, `build_site.py`, and preserved styles remain in the repository. This prevents a Pages legacy root deployment from exposing third-party-only/contradictory table fields in the earlier generated HTML.
+
+- PR #5: https://github.com/buffedlizard55-lab/Koreatrip2/pull/5 — integration candidate; check run [39564824249](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39564824249) passed validation/build. Merge result and Pages publication to be recorded after merge.
+
+- Publication follow-up: PR #5 merged as `2ec80bd` after check [39564880836](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39564880836) passed. A near-simultaneous PR #4 merge (`7f1d419`) added two more earlier-session pages that did not meet official-link/table requirements; their originals and worksheet are preserved verbatim under `research/legacy-pages/`, and their public page URLs redirect to the audited guides. The validator now rejects any new noncanonical table page when legacy Pages publishes the repository root. PR #4's unique generator remains in `tools/generate_site.py` for provenance, not publication. The first Pages run for `2ec80bd` was canceled when higher-priority `7f1d419` arrived; [Pages run 39564941676](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39564941676) for `7f1d419` succeeded. Live overview, day plan and review pages returned the audited content. A follow-up PR/deployment will publish this final two-page safeguard and log its run.
+
+- Final deployment after PR #7: merged as `b061712ffd4132d3e31ad5ad3d067f83e1c9c1c5` after [validation run 39565173421](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39565173421) passed. [Main validation 39565228330](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39565228330) and [legacy Pages build/deploy 39565227749](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/39565227749) both passed; Pages API reported `built`. Live `/`, `/pages/review.html`, `/pages/days.html`, `/pages/food-guide.html` returned current audited content, and the superseded `/pages/activities.html` and `/pages/day-by-day.html` followed redirects to their audited equivalents. Site: https://buffedlizard55-lab.github.io/Koreatrip2/.
+- PR #4 arrived just after PR #5 and had been resolved by retaining main's integrated site plus the other session's four unique files; no previous work was discarded. PR #6 is a coordination-only follow-up from that session, but its board snapshot now conflicts with the audit and asserts unsupported Kyoja relocation / USD equivalences. This final log incorporates its useful merge and deployment status while keeping the uncertain fields explicitly flagged; PR #6 can be closed as superseded after this update.
 
 ---
 
-## 1. Task Board
+## Session `535004bc` (`arena/535004bc-koreatrip2`) Work Board & Conflict Resolution Log
 
-| Task ID | Task Description | Status | Owning Session ID | Branch | File Scope |
-|---|---|---|---|---|---|
-| `T1-days-1-3` | Verify Days 1–3 line-by-line (ICN Airport transit, AREX, Limousine Bus, Stanford Hotel Myeongdong, N Seoul Tower & Cable Car, Myeongdong Shopping/Dept Stores/Olive Young/Street Food, Gwangjang & Mangwon Markets, Pig Restaurant 2, Myeongdong Kyoja, Crystal Jade, Hongojib, Sookhee, Gyeongbokgung Palace, Bukchon Hanok Village, Cafe Onion Anguk, Tea House) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-1-3.json`, `verification/days-1-3.md` |
-| `T2-days-4-6` | Verify Days 4–6 line-by-line (Seongsu-dong, Solsot, DDP, Hanjungsun, Caricature, Eternalog, Blue Elephant, Cafe Far Ben, Cafe Onion Seongsu, Rain Report, Jayeondo Sogeumppang, Musinsa Standard, Marge Sherwood, Ader Error, Brandy Melville, Break Silence, Chuncheongol Dakgalbi, Uri Wang Galbitang, Starfield COEX Mall, Soul Market, Gangnam Style Statue, Ikseon-dong & Insadong, Chwihyang / Favorite of Ikseon) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-4-6.json`, `verification/days-4-6.md` |
-| `T3-days-7-9-transit` | Verify Days 7–9 & Public Transit Routing (Itaewon Day 7, Day 8 gap analysis, Day 9 Seoul–Busan KTX, L7 Haeundae by LOTTE, Haeundae Beach & Market, hotel-to-destination transit routes) | `done` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `data/days-7-9-transit.json`, `verification/days-7-9-transit.md` |
-| `T4-site-integration` | Final integration, combined dataset (`data/verified-itinerary.json`), GitHub Pages dashboard site (`index.html`, category subpages, `flagged.html`), link/build check, PR & merge to `main`, GitHub Pages deployment verification | `in progress` | `session-9bfbcc9b` | `arena/9bfbcc9b-koreatrip2` | `index.html`, `itinerary.html`, `transit.html`, `dining.html`, `shopping-cafes.html`, `attractions-hotels.html`, `flagged.html`, `assets/*`, `data/verified-itinerary.json`, `.nojekyll` |
+- **Conflict Resolution Log (2026-10-21)**: When synchronizing `arena/535004bc-koreatrip2` with `origin/main` (`7f1d419` and `aed08d9`, following merges of PRs #1–#8), conflicts in `COORDINATION.md` were resolved by retaining 100% of all prior sessions' logs (`e314c1fc`, `6c06fb0a`, `96a67227`, `d20d7578`) and appending this session's official primary-source audit and structured JSON datasets.
+- **Additional Official Primary Sources Verified & Integrated by Session `535004bc`** (recorded in `data/itinerary.js`, `research/AUDIT.md`, `data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`):
+  - **Crystal Jade Korea Official (`crystaljade.co.kr`)**: Confirmed both Myeongdong-area branches—**Shinsegae Main Branch B1 (`https://www.crystaljade.co.kr/menu/menuInfo.do?shSq=49&shGb=H`)** (`63 Sogong-ro, Jung-gu, B1F`, Weekdays `10:30–20:00`, Weekends `10:30–20:30`) and **Sogong Branch (`https://www.crystaljade.co.kr/menu/menuInfo.do?shSq=20&shGb=A`)** (`16 Namdaemun-ro 7-gil, B1F`, `11:00–21:30`, break `15:00–17:00`).
+  - **Myeongdong Kyoja Official (`http://www.mdkj.co.kr/en/menu/menu03.php`) & MICHELIN Guide (`https://guide.michelin.com/sg/en/seoul-capital-area/kr-seoul/restaurant/myeongdong-kyoja`)**: Confirmed `10:30–21:00` daily hours, Main Store (`29 Myeongdong 10-gil` / `129 Toegye-ro`) and Branch Store (`8 Myeongdong 10-gil`), plus official brand history noting automated mandu shaping since 1983.
+  - **Airport Limousine Co. Official (`https://airportlimousine.co.kr/en/sub/sub01.php?cat_no=47`)**: Confirmed Route **#6015** (`17,000 KRW` Adult, `12,000 KRW` Child, `05:19–22:59`) stopping directly at `Lotte Hotel / IBIS Myeong-dong` (2-min walk from Stanford Hotel Myeongdong), and the March 5, 2026 mandatory ticket-office purchase rule.
+  - **AREX Official (`https://www.arex.or.kr/content.do?url=&menuNo=MN201503300000000001&contentNo=&clientLocale=ko_KR&clientDevice=Normal`)**: Confirmed Express Train duration (`43 min` T1 / `51 min` T2) and updated `13,000 KRW` adult fare (`9,500 KRW` on older English pages).
+  - **Stanford Hotel Myeongdong Official FAQ (`https://stanford.webhelper.co.kr/myeongdong/en/contents/list/faq`)**: Confirmed `84 Namdaemun-ro, Jung-gu` (9F Lobby), check-in after `15:00`, check-out before `12:00`, early/late fee `20,000 KRW/hr`.
+  - **L7 HAEUNDAE by LOTTE Official (`https://www.lottehotel.com/prerendered/haeundae-l7/en/about/art-experience/l7/index.html` & `https://www.lottehotel.com/haeundae-l7/ko/hotel-offers/packages/2024-06/memories-in-perfume.html`)**: Confirmed `55 Haeun-daero 570beon-gil, Haeundae-gu, Busan`, check-in `15:00`, check-out `12:00` (Nov).
+  - **Olive Young Myeongdong Town Flagship (`https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=148763`)**: Confirmed `53 Myeongdong-gil, Jung-gu` and `10:00–22:30` daily hours (correcting the itinerary's `8:00–12:00am` claim).
+  - **Seongsu & Ikseon Official Brand Sources**: Blue Elephant (`https://blueelephant.co/product/space-seongsu/4552/`), Musinsa Standard Seongsu (`https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=216520`), MARGESHERWOOD Flagship (`https://global.margesherwood.com/pages/stockist-official`), Eternalog (`https://eternalog-fotobooth.com/21`), Acorn Caricature (`https://acorncaricature.imweb.me/Map?sort=UPDATE&category=1i08d61PE1`), Break Silence (`https://breaksilence-world.com/contact.html`), Jayeondo Salt Bread (`https://english.visitseoul.net/area/saltbread-in-seaside/ENPxtexu0`), Cafe Onion (`https://english.visitseoul.net/eat/cafe-onion/ENP020587`), Haeundae Beach (`https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=373`), and Haeundae Traditional Market (`https://english.visitkorea.or.kr/svc/contents/contentsView.do?menuSn=459&vcontsId=84963`).
+- **PR & Merge Result (Session `535004bc`)**:
+  - PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/9
+  - Validation (`node scripts/validate.mjs` & `node scripts/build.mjs`): Passed (`9 days, 58 place entries, 11 routes, 11 HTML pages; all rows and steps have official links`).
+  - Published GitHub Pages URL: https://buffedlizard55-lab.github.io/Koreatrip2/
 
 ---
 
-## 2. Session Log
+## Session `9bfbcc9b` (`arena/9bfbcc9b-koreatrip2`) Work Board & Conflict Resolution Log
 
-- **2026-10-21 (Session `session-9bfbcc9b`)**: Created `COORDINATION.md` and claimed `T1-days-1-3`.
-- **2026-10-21 (Session `session-9bfbcc9b`)**: Completed `T1-days-1-3` (`data/days-1-3.json`, `verification/days-1-3.md`). Claimed `T2-days-4-6`.
-  - **Sources Verified**: Incheon Airport (`airport.kr`), AREX (`arex.or.kr`), Airport Limousine (`airportlimousine.co.kr`), Stanford Hotel Myeongdong (`stanford.webhelper.co.kr`), N Seoul Tower (`nseoultower.co.kr`), VisitKorea (`english.visitkorea.or.kr`), VisitSeoul (`english.visitseoul.net`), Lotte Department Store (`global.lotteshopping.com`), Shinsegae (`shinsegaedf.com`), Olive Young (`oliveyoung.co.kr`), MICHELIN Guide (`guide.michelin.com`), Myeongdong Kyoja (`mdkj.co.kr`), Crystal Jade Korea (`crystaljade.co.kr`), Hongojib (`hongojib.com`), Korea Heritage Service (`royal.khs.go.kr`), Seoul Metropolitan Gov. (`english.seoul.go.kr`).
-  - **Major Irregularities Flagged (Days 1–3)**:
-    1. **Day 3 Critical Closure**: Gyeongbokgung Palace & Changing of the Guard are **CLOSED on Tuesdays** (Nov 3, 2026 is a non-holiday Tuesday).
-    2. **Day 2 Critical Closure**: Cho Yonsoon's Netflix hand-cut noodle stall (**Gohyang Kalguksu**, Stall A70 at Gwangjang Market) is **CLOSED on Mondays** (Nov 2, 2026).
-    3. **Day 3 Bukchon Curfew**: Bukchon Hanok Village Red Zone (`Bukchon-ro 11-gil`) enforces a strict **10:00–17:00** tourist visiting window (100,000 KRW fine after 17:00).
-    4. **Day 2 Olive Young Hours**: Flagship operates **10:00–22:30**, not `8:00 AM–12:00 AM`.
-    5. **Day 2 Namsan Tower / Cable Car**: Year typo (`Nov 2, 2006`), Namsan Shuttle Bus 01A/01B bypasses the Cable Car, Namsan Ormi outdoor elevator is closed Mondays 09:00–14:00, and Cable Car closes at 23:00 (not 10:30 PM).
-    6. **Day 2 Crystal Jade Shinsegae B1F**: Closes at **20:00 (Last Order 19:30)** on Mondays.
-    7. **Day 1 AREX Fare & Transfer**: Express Train is 13,000 KRW (~$9.50 USD) and terminates at Seoul Station, requiring a Line 4 transfer or taxi to reach Myeongdong.
-- **2026-10-21 (Session `session-9bfbcc9b`)**: Completed `T2-days-4-6` (`data/days-4-6.json`, `verification/days-4-6.md`). Claimed `T3-days-7-9-transit`.
-  - **Sources Verified**: CatchTable (`catchtable.net`), Dongdaemun Design Plaza (`ddp.or.kr`), Hanjungsun (`hanjungsun.co.kr`), Acorn Caricature (`acorncaricature.imweb.me`), Eternalog (`eternalog-fotobooth.com`), Blue Elephant (`en.blueelephant.co`), Musinsa Standard (`locations.musinsa.com`), Marge Sherwood (`global.margesherwood.com`), ADER ERROR (`adererror.com`), Brandy Melville (`brandymelville.com`), Break Silence (`breaksilence-world.com`), NOL World (`world.nol.com`), Starfield COEX Mall (`starfield.co.kr`), VisitKorea (`english.visitkorea.or.kr`), VisitSeoul (`english.visitseoul.net`).
-  - **Major Irregularities Flagged (Days 4–6)**:
-    1. **Day 4 DDP vs. Seongsu Mix-Up**: Item 2 labels "Industrial warehouses converted into flagship fashion pop-ups & artisan bakeries" as **Dongdaemun Design Plaza (DDP)**, whereas that describes **Seongsu-dong** (Daelim Changgo / Seongsu Yeonbang); DDP is Zaha Hadid's futuristic cultural plaza in Jung-gu.
-    2. **Day 4 & Day 6 Duplicate Restaurant (`Chwihyang` = `Favorite of Ikseon`)**: `Chwihyang` (`익선취향`) and `Favorite of Ikseon` (`@favorite_ikseon`) on Day 6 (plus the stray note at the bottom of Day 4) are the **exact same restaurant** (`17-32 Supyo-ro 28-gil, Jongno-gu`).
-    3. **Day 4 & Day 6 Duplicate Cafe/Bakery Chains**: **Cafe Onion** (Day 3 Anguk & Day 4 Seongsu), **Rain Report** (Day 4 Seongsu & Day 6 Ikseon-dong), and **Jayeondo Salt Bread** (Day 4 Seongsu & Day 6 Ikseon-dong) are all scheduled twice across different days.
-    4. **Day 4 Brandy Melville Early Closing**: Closes at **19:00 (7:00 PM)** daily.
-    5. **Day 4 Solsot Seongsu Price & Break Time**: Dishes cost 14,000–25,900 KRW (~$10.20–$18.80 USD, not $7–$14) and it closes for weekday break time **15:00–17:00**.
-    6. **Day 4 Uri Wang Galbitang Geographic Detour**: Located in Gangdong-gu (`119-9 Seongan-ro`), ~32 min east across the Han River from Seongsu.
-    7. **Day 5 Subway to Starfield COEX Mall**: Direct Subway Line 2 from `Euljiro 1(il)-ga Station` (2-min walk from Stanford Hotel) to `Samseong Station` takes **30 minutes with zero transfers** (not 47 minutes).
-- **2026-10-21 (Session `session-9bfbcc9b`)**: Completed `T3-days-7-9-transit` (`data/days-7-9-transit.json`, `verification/days-7-9-transit.md`). Claimed `T4-site-integration`.
-  - **Sources Verified**: VisitKorea (`english.visitkorea.or.kr`), VisitSeoul (`english.visitseoul.net`), VisitBusan (`visitbusan.net`), KORAIL (`letskorail.com`), Lotte Hotels (`lottehotel.com/haeundae-l7/en.html`), Stanford Hotel Myeongdong (`stanford.webhelper.co.kr`).
-  - **Major Irregularities Flagged (Days 7–9)**:
-    1. **Day 7 Incomplete Itaewon Plan**: Day 7 lists only *"Itaewon (Nov 7)"* with no sub-items, while **Pig Restaurant 2 (Itaewon)** is listed on Day 2 (Myeongdong day).
-    2. **Day 8 Completely Blank**: Sunday, Nov 8, 2026 has zero planned items in the source document (left blank in verified fields per strict no-hallucination rules; flagged for review).
-    3. **Day 9 KTX Boarding Rule Discrepancy**: Prompt advises boarding KTX 45 minutes early, whereas Seoul Station KTX platform tracks are announced ~20 minutes before departure and train doors open ~15–20 minutes before departure.
-    4. **Day 9 L7 Haeundae Check-in / Check-out Times**: Official check-in is **15:00** and check-out is **11:00 AM** (1 hour earlier than Stanford Hotel Myeongdong).
-    5. **Day 9 Numbering Irregularities**: Duplicate `1.` and missing `3.` in original Day 9 list (`1, 1, 2, 4, 5, 6, 7, 8`).
-
-
+- **Conflict Resolution Log (2026-10-21)**: Synchronized `arena/9bfbcc9b-koreatrip2` with `origin/main` (`9b06771`, following merges of PRs #1–#9). Preserved 100% of all prior sessions' files and logs (`e314c1fc`, `6c06fb0a`, `d20d7578`, `96a67227`, `535004bc`), retained `535004bc`'s `data/days-1-3.json` while saving `9bfbcc9b`'s Days 1–3 JSON as `data/days-1-3-session-9bfbcc9b.json` (plus `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/verified-itinerary.json`, and `verification/days-*.md`), and merged primary official brand/tourism sources into `data/itinerary.js` and `research/AUDIT.md`.
+- **Additional Official Primary Sources Verified & Integrated by Session `9bfbcc9b`**:
+  - **Hongojib (`홍고집`) Myeongdong Solo BBQ (`https://www.hongojib.com/`)**: Confirmed `19 Myeongdong 7-gil, Jung-gu, Seoul` and `Daily 11:00–01:00 (last order 24:00)` (solo grill sets `₩10,900–₩16,900`).
+  - **Gwangjang Market & Gohyang Kalguksu (`https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=106345`)**: Confirmed food alley `09:00–23:00` daily and documented that Cho Yonsoon's Netflix-featured hand-cut noodle stall (**Gohyang Kalguksu**, Stall A70) is closed every Monday (Day 2, Nov 2, 2026) and the 4th Sunday of the month.
+  - **ADER ERROR Seongsu Space (`https://en.adererror.com/store/flagship.html`)**: Confirmed flagship address `82 Seongsui-ro, Seongdong-gu, Seoul` and operating hours `Daily 11:00–21:00`.
+  - **Brandy Melville Seoul (`https://kr.brandymelville.com/pages/locations`)**: Confirmed Seongsu flagship address `101 Yeonmujang-gil, Seongdong-gu, Seoul` and operating hours `Daily 11:00–19:00` (early 7:00 PM closing).
+  - **Full Line-by-Line Verification Reports & 14-Route Hotel Transit Matrix**: Published in `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`, and `data/verified-itinerary.json`.
 

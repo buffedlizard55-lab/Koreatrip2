@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flagged for Review - Korea Itinerary</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<header>
+  <h1>Korea Itinerary (2 Adult Travelers)</h1>
+  <p>Trip window: Oct 31 – Nov 9, 2026 · Seoul (Myeongdong) → Busan (Haeundae). Every row links to an official source where verified.</p>
+</header>
+<nav>
+  <a href="../index.html" class="">Home</a>
+  <a href="../pages/transportation.html" class="">Transportation</a>
+  <a href="../pages/accommodation.html" class="">Accommodation</a>
+  <a href="../pages/attractions.html" class="">Attractions</a>
+  <a href="../pages/shopping.html" class="">Shopping</a>
+  <a href="../pages/food.html" class="">Food</a>
+  <a href="../pages/cafes.html" class="">Cafes &amp; Bakeries</a>
+  <a href="../pages/markets.html" class="">Markets</a>
+  <a href="../pages/nightlife.html" class="">Nightlife</a>
+  <a href="../pages/busan.html" class="">Busan</a>
+  <a href="../pages/flagged.html" class="active">Flagged for Review</a>
+  <a href="../pages/all.html" class="">All Entries</a>
+</nav>
+
+<div class="container">
+<div class="card"><h2>Flagged for Review</h2><p>Items that could not be verified against an official source, plus irregularities found during verification. Unverified values are left blank in the tables. Flagged items do not block the merge.</p><div class="table-wrap"><table><tr><th>Day</th><th>Item</th><th>Category</th><th>Flag / Irregularity</th><th>Source checked</th></tr>
+<tr><td>Day 1</td><td>Flight SFO to ICN (Incheon International Airport)</td><td>Transportation</td><td class='flag'>Flight details unverified (no airline/flight number provided).</td><td>—</td></tr>
+<tr><td>Day 9</td><td>Uber / Taxi Seoul Station → ICN area (Day 9: Seoul Station)</td><td>Transportation</td><td class='flag'>Fare/time unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 9</td><td>KTX (Korea Train Express) Seoul → Busan</td><td>Transportation</td><td class='flag'>Fare subject to change; confirm on Korail official site before booking.</td><td>https://www.korail.com</td></tr>
+<tr><td>Day 9</td><td>Uber / Taxi Busan Station → L7 Haeundae</td><td>Transportation</td><td class='flag'>Fare/time unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 2</td><td>N Seoul Tower (Namsan Tower) - Observatory</td><td>Attractions</td><td class='flag'>Itinerary stated 10:00-10:30; corrected to official hours above.</td><td>https://www.nseoultower.co.kr/eng/visit/use.asp</td></tr>
+<tr><td>Day 2</td><td>Myeongdong Shopping District</td><td>Attractions</td><td class='flag'>No single official hours for the district; see individual store rows.</td><td>https://english.visitseoul.net/area/Myeongdong-EN/ENP000036</td></tr>
+<tr><td>Day 2</td><td>Street food stalls (Myeongdong)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours unverified (no official source); itinerary values not confirmed.</td><td>—</td></tr>
+<tr><td>Day 2</td><td>Myeongdong Night Food Market</td><td>Markets</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 2</td><td>Myeongdong Kyoja (main branch)</td><td>Food &amp; Restaurants</td><td class='flag'>Address updated: main branch moved to 129 Toegye-ro in 2026; older listings show 29 Myeongdong 10-gil.</td><td>https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=99925</td></tr>
+<tr><td>Day 2</td><td>Crystal Jade (Myeongdong Shinsegae location)</td><td>Food &amp; Restaurants</td><td class='flag'>Branch-specific hours/address unverified (no official Korea source).</td><td>https://www.crystaljade.com/</td></tr>
+<tr><td>Day 2</td><td>Hongojib (Myeongdong solo BBQ)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours unverified (official site not accessible); reported 11:00-01:00 daily from third-party sources.</td><td>https://hongojib.com</td></tr>
+<tr><td>Day 2</td><td>Myeongdong Sookhee (bar)</td><td>Nightlife</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 2</td><td>Pig Restaurant 2 (Itaewon) - premium quality</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 3</td><td>Gyeongbokgung Palace</td><td>Attractions</td><td class='flag'>Itinerary schedules this on Tuesday Nov 3, 2026, but the palace is CLOSED on Tuesdays. Major itinerary conflict - reschedule to Mon/Wed-Sun.</td><td>https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=87740</td></tr>
+<tr><td>Day 3</td><td>Changing of the Royal Guard Ceremony</td><td>Attractions</td><td class='flag'>Not held on Tuesdays; conflicts with Day 3 (Tue Nov 3).</td><td>https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=87740</td></tr>
+<tr><td>Day 3</td><td>Traditional tea house experience</td><td>Food &amp; Restaurants</td><td class='flag'>Hours unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 3</td><td>Traditional restaurant near palace (lunch)</td><td>Food &amp; Restaurants</td><td class='flag'>Unspecified restaurant; unverified.</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Solsot (stone pot rice)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours from third-party reservation platform, not official brand site.</td><td>https://www.catchtable.net/shop/solsot_seungsoo</td></tr>
+<tr><td>Day 4</td><td>Hanjungsun (fruit mochi)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Caricature (animated character portrait)</td><td>Attractions</td><td class='flag'>Vendor unspecified; unverified.</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Eternalog (photo booth experience)</td><td>Attractions</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Cafe Far Ben (pistachio latte)</td><td>Cafes &amp; Bakeries</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Ader Error - Seongsu Space</td><td>Shopping</td><td class='flag'>Hours unverified (not on official site); address from official site/press.</td><td>https://www.adererror.com/en</td></tr>
+<tr><td>Day 4</td><td>Brandy Melville - Seongsu</td><td>Shopping</td><td class='flag'>Hours/location unverified from official source (reported 11:00-19:00 daily).</td><td>https://locations.brandymelville.com/</td></tr>
+<tr><td>Day 4</td><td>Break Silence (R&amp;B &amp; cocktails)</td><td>Nightlife</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Chuncheongol Dakgalbi (unlimited wraps)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 4</td><td>Uri Wang Galbitang (Gangdong)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 5</td><td>Soul Market (pastries &amp; coffee) at COEX</td><td>Cafes &amp; Bakeries</td><td class='flag'>Vendor/hours unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 5</td><td>Gangnam Style statue</td><td>Attractions</td><td class='flag'>Location/hours unverified from official source (widely reported outside COEX).</td><td>—</td></tr>
+<tr><td>Day 6</td><td>Chwihyang (pork belly rose pasta)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 6</td><td>Jayeondo Salt Bread &amp; House (Ikseondong)</td><td>Cafes &amp; Bakeries</td><td class='flag'>Hours unverified (no official source; reported 09:00-22:00).</td><td>—</td></tr>
+<tr><td>Day 6</td><td>Favorite of Ikseon (pork belly rose pasta)</td><td>Food &amp; Restaurants</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+<tr><td>Day 7</td><td>Itaewon neighborhood exploration</td><td>Attractions</td><td class='flag'>Day 7 has no detailed plan in itinerary; unverified.</td><td>—</td></tr>
+<tr><td>Day 8</td><td>Day 8 - no itinerary provided</td><td>Attractions</td><td class='flag'>Day 8 has no planned activities in the itinerary; needs planning.</td><td>—</td></tr>
+<tr><td>Day 9</td><td>Haeundae Beach walk</td><td>Busan</td><td class='flag'>Hours unverified (public beach; no official source).</td><td>—</td></tr>
+<tr><td>Day 9</td><td>Haeundae Market (street food)</td><td>Busan</td><td class='flag'>Hours/location unverified (no official source).</td><td>—</td></tr>
+</table></div></div>
+</div>
+<footer>Korea Itinerary site · Data verified against official sources where available; unverified items listed on Flagged for Review.</footer>
+</body>
+</html>
