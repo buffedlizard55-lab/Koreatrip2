@@ -11,7 +11,7 @@ Shared task board for parallel agent sessions.
 | d20d7578 | arena/d20d7578-koreatrip2 | Verification worksheet, day-by-day and activities pages, generator | merged to main (PR #4); earlier pages archived and redirected after audit |
 | 96a67227 | arena/96a67227-koreatrip2 | Canonical 11-page dashboard, source audit, validation and legacy URL migration | merged to main (PRs #5, #7, #8) |
 | 535004bc | arena/535004bc-koreatrip2 | Line-by-line official verification JSONs (`data/hotels-transport.json`, `data/days-1-3.json`, `data/days-4-9.json`, `data/flagged.json`) + official brand source integration (`crystaljade.co.kr`, `eternalog-fotobooth.com`, `breaksilence-world.com`, `acorncaricature.imweb.me`, L7 Haeundae hours, Olive Young Town hours) | merged to main (PR #9) |
-| 9bfbcc9b | arena/9bfbcc9b-koreatrip2 | Line-by-line verification reports (`verification/days-*.md`), structured datasets (`data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/verified-itinerary.json`), official brand source integration (`hongojib.com`, `en.adererror.com`, `kr.brandymelville.com`, Gwangjang Gohyang Kalguksu Monday closure) | ready for PR & merge to main |
+| 9bfbcc9b | arena/9bfbcc9b-koreatrip2 | Line-by-line verification reports (`verification/days-*.md`), structured datasets (`data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/verified-itinerary.json`), official brand source integration (`hongojib.com`, `en.adererror.com`, `kr.brandymelville.com`, Gwangjang Gohyang Kalguksu Monday closure) | merged to main (PR #10) |
 
 ## Tasks
 
@@ -124,4 +124,10 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   - **ADER ERROR Seongsu Space (`https://en.adererror.com/store/flagship.html`)**: Confirmed flagship address `82 Seongsui-ro, Seongdong-gu, Seoul` and operating hours `Daily 11:00–21:00`.
   - **Brandy Melville Seoul (`https://kr.brandymelville.com/pages/locations`)**: Confirmed Seongsu flagship address `101 Yeonmujang-gil, Seongdong-gu, Seoul` and operating hours `Daily 11:00–19:00` (early 7:00 PM closing).
   - **Full Line-by-Line Verification Reports & 14-Route Hotel Transit Matrix**: Published in `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`, and `data/verified-itinerary.json`.
+- **PR & Merge Result (Session `9bfbcc9b`)**:
+  - PR: https://github.com/buffedlizard55-lab/Koreatrip2/pull/10
+  - Merge Result: Merged to `main` (`gh pr merge 10 --merge`)
+  - Validation (`node scripts/validate.mjs` & `node scripts/build.mjs`): Passed (`9 days, 58 place entries, 11 routes, 11 HTML pages; all rows and steps have official links`)
+  - Published GitHub Pages URL: https://buffedlizard55-lab.github.io/Koreatrip2/
+
 
