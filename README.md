@@ -23,4 +23,4 @@ node scripts/validate.mjs
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
-The Pages workflow validates and packages only the canonical audited pages via `node scripts/build.mjs`. Prior-session static pages and their data remain in Git for provenance but are deliberately excluded from the published artifact because some older rows have conflicting or unsupported values. The earlier session’s `app.js` and `styles.css` are retained from PR #1 for provenance; the new pages use `assets/app.js` and `assets/style.css`.
+GitHub Pages is configured for **legacy deployment from `main`**. The validation workflow checks and packages the canonical audited pages via `node scripts/build.mjs`, but GitHub Pages publishes the repository root automatically on a main push. Prior-session static pages and their data remain in Git for provenance; the new navigation points only to the audited dashboard and category views. Some older rows have conflicting or unsupported values, so use the new directory as the source of truth. The earlier session’s `app.js` and `styles.css` are retained from PR #1 for provenance; the new pages use `assets/app.js` and `assets/style.css`.
