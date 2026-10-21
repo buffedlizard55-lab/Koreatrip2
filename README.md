@@ -12,6 +12,8 @@ A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Bu
 - `pages/review.html`: flagged uncertainties, including all unverified rows
 - `data/itinerary.js`: single source for site data; empty location/hour values mean not officially confirmed
 - `research/AUDIT.md`: verification notes and key corrections
+- `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`: detailed line-by-line verification reports and 14-route hotel transit matrix (`session-9bfbcc9b`)
+- `data/verified-itinerary.json`, `data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`: structured verification datasets (`session-9bfbcc9b`)
 - `COORDINATION.md`: task board and handoff record
 
 Source status is deliberately conservative. An “official context · not evidence” link points to a government/tourism area page, **not** a confirmation of a specific shop. No booking information was provided. All regular hours should be reconfirmed for the day of travel.
