@@ -55,7 +55,7 @@ function reviewPage(){ const flagged=places.filter(p=>p.status==='unverified'||p
  <div class="section-title"><div><p class="eyebrow">MOST IMPORTANT</p><h2>Planning irregularities</h2></div></div>
  <div class="issue-list">
  ${[
- ['01','Year & flight dates','The weekday sequence fits Nov 1–9, 2026, not the “Nov 2, 2006” typo. Oct 31 departure / Nov 1 arrival needs a ticket to confirm.',S.sfo],
+ ['01','Year & flight dates','The weekday sequence fits Nov 1–16, 2026, not the “Nov 2, 2006” typo. Oct 31 departure / Nov 1 arrival needs a ticket to confirm.',S.sfo],
  ['02','Palace on Tuesday','Nov 3 is Tuesday and Gyeongbokgung Palace + Guard Ceremony are closed Tuesdays. The plan swaps Seongsu to Tuesday and Gyeongbokgung to Wednesday. The 2026 free-admission notice excludes closing days.',S.palace],
  ['03','Bukchon access & fine','The restricted residential Red Zone (Bukchon-ro 11-gil) permits tourist visits only 10:00–17:00 with a ₩100,000 fine after 17:00; do not plan an evening visit.',S.bukchon],
  ['04','Prices in dollars & hours','$7 AREX (official Express ₩13,000), $13 bus (official Route 6015 ₩17,000), $31 tower bundle (Observatory ₩29,000 + Cable Car ₩15,000 RT), and “10:00–10:30” tower hours (official 10:00–22:30/23:00) are corrected.',S.towerPrice],
