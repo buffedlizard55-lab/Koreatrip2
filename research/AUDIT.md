@@ -57,7 +57,8 @@ Key findings added to the published **Flagged for Review** page:
 - BUSAN X the SKY was requested on both Days 10 and 12; both entries are preserved with a duplicate note.
 - Busan’s official event calendar covers the year through Dec 31 and lists the Gwangalli M Drone Light Show every Saturday, at winter times 19:00 and 21:00, about 12 minutes. The Nov 14 show is a recurring Saturday date; weather/technical delays or cancellation remain possible. Recheck the [official event page](https://www.busan.go.kr/eng/bsevents/1713160) and [organizer](https://www.gwangallimdrone.co.kr/en/home) on the day.
 - Day 13 and Day 15 are intentionally unplanned, matching the source itinerary.
-- Day 16 return KTX train, fare and duration remain blank until a particular KORAIL service is chosen. AREX All-Stop, not the non-stop Express, is required for Hongik University Station.
+- Day 16 return KTX train, fare and duration remain blank until a particular KORAIL service is chosen. AREX All-Stop, not the non-stop Express, serves Hongik University Station; the [official AREX station page](https://www.arex.or.kr/station/trainTime.do?stnCd=030&menuNo=MN201503300000000025&tab=2) provides station/train information. Follow live operator details.
+- Lotte’s dated official package page lists November checkout at 12:00; the supplied 11:00 reminder conflicts with that listing. The itinerary flags the discrepancy and directs travelers to their reservation’s applicable policy.
 - Earlier cross-session report `verification/days-7-9-transit.md` includes specific train, taxi and local transit estimates not retained in the canonical dataset because the operator sources linked there do not establish every asserted value. Use the canonical `data/itinerary.js` and live `pages/review.html` for current values; do not rely on a generic KTX fare/duration/platform rule.
 
 No flight, hotel, or rail booking confirmation was supplied. Blank cells mean unconfirmed, not closed or unavailable.
