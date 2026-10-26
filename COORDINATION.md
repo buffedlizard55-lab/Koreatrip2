@@ -195,3 +195,14 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 | T8580a144-1 | Extend verified itinerary to full 16-day (Nov 1–16) Seoul→Busan→Seoul with Busan coastal, Gamcheon, Songdo, Gwangalli & return transfer | done (adopted canonical `ddad0014` + `fed1cdf` + `77effca`) | arena/8580a144-koreatrip2 | `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md`, `scripts/validate.mjs`, `pages/*`, `verification/days-10-16.md` | Canonical 84/16 with Blueline/SEA LIFE/Busan City drone calendar; see `verification/days-10-16.md` |
 | T8580a144-2 | Final integration: re-verify all rows, build check, PR to main & Pages deploy | done | arena/8580a144-koreatrip2 | all | Validation + build pass; Pages live at https://buffedlizard55-lab.github.io/Koreatrip2/; PR #19→20 merge will be COORDINATION-only |
 
+
+## Session `8580a144` — Final publication confirmation (PR #21)
+
+- **PR**: https://github.com/buffedlizard55-lab/Koreatrip2/pull/21
+- **Merge**: `73efc028778a04fe13c960fa8160f0e6444dae39` via `gh pr merge 21 --merge` on 2026-10-26T06:00:59Z
+- **Validation**: `node scripts/validate.mjs` → `OK: 16 days, 84 place entries, 16 routes, 11 HTML pages; all rows and steps have official links` (run 40277396661); PR check 40277387088 passed.
+- **Pages deploy**: `pages build and deployment` 40277396095 succeeded in 59s; Pages API `status: built` at https://buffedlizard55-lab.github.io/Koreatrip2/
+- **Flagged irregularities**: Published on `pages/review.html` (15+ issues including Gohyang Monday closure downgrade, Nurimaru hours conflict, duplicated X the SKY, dense Day 11, weather-dependent drone show). No unverified values silently filled; empty fields are intentional.
+- **Site**: Live 16-day dashboard — index overview, `pages/days.html` per-day drill-down (jumpbar + timeline tables + tips), `pages/places.html` filterable directory (84 rows, all with official HTTPS links), `pages/transport.html` (16 routes from Stanford → L7 → mercure Hongdae), category guides, and Flagged for Review.
+- **Status**: `done` — all repo work verified line-by-line from official trusted sources, no hallucinations; links provided for manual review; site is mobile-friendly and organized for busy travelers.
+
