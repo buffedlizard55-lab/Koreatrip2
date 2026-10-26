@@ -14,6 +14,12 @@ for(const [i,p] of places.entries()){
 }
 const ids=new Set();
 for(const day of days){if(ids.has(day.n))fail(`Duplicate day ${day.n}`);ids.add(day.n);if(!day.steps?.length)fail(`No steps day ${day.n}`);for(const step of day.steps)if(!step[2]?.startsWith('https://'))fail(`Unsourced step day ${day.n}`)}
+const amso=places.find(p=>p.name==='Haeundae Amso Galbi-jip');
+if(!amso)fail('Missing re-audited place: Haeundae Amso Galbi-jip');
+else if(amso.source!=='https://www.haeundaegalbi.com/'||amso.extra!=='https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=73814')fail('Amso Galbi must cite the operator and VisitKorea');
+const nurimaru=places.find(p=>p.name==='Nurimaru APEC House');
+if(!nurimaru)fail('Missing re-audited place: Nurimaru APEC House');
+else if(!nurimaru.hours.includes('09:00–18:00')||nurimaru.extra!=='https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=59747')fail('Nurimaru must use the KTO hours and last-admission source');
 if(days.length!==16)fail('Expected all 16 supplied itinerary days');
 for(let n=1;n<=16;n++)if(!ids.has(n))fail(`Missing day ${n}`);
 for(const [i,r] of routes.entries())if(!r.source?.startsWith('https://'))fail(`Route ${i}: missing official link`);
