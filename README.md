@@ -12,8 +12,8 @@ A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Bu
 - `pages/review.html`: flagged uncertainties, including all unverified rows
 - `data/itinerary.js`: single source for site data; empty location/hour values mean not officially confirmed
 - `research/AUDIT.md`: verification notes and key corrections
-- `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`, `verification/days-10-16.md`: audit reports; the Days 7–9 report is a historical snapshot with superseded unsupported estimates explicitly disclaimed
-- `data/verified-itinerary.json`, `data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`: archived session datasets retained for provenance, not the current source of truth
+- `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`, `verification/days-10-16.md`, `verification/days-10-16-session-230543ec.md`, `verification/days-10-16-c697e933.md`, `verification/days-1-9-audit-c697e933.md`: audit and verification reports covering all 16 days; the Days 7–9 report is a historical snapshot with superseded unsupported estimates explicitly disclaimed
+- `data/verified-itinerary.json`, `data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/days-10-16-session-230543ec.json`, `data/days-10-16-c697e933.json`: session verification datasets retained for provenance (`data/itinerary.js` is the single live source of truth)
 - `COORDINATION.md`: task board and handoff record
 
 Days 13 and 15 remain open because no activities were supplied. Date-specific rail services and reservations are not inferred. Exact transit times/fares remain blank where an official source does not confirm them; specific unknown businesses are flagged.
