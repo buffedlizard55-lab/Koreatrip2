@@ -1,5 +1,7 @@
 # Verification Report: Days 7–9 & Public Transit Analysis (Nov 7 – Nov 9, 2026)
 
+> **Important — superseded audit details (26 Oct 2026):** This earlier session report contains detailed KTX fares/durations/boarding timing, taxi estimates, local transit fares, and some business suggestions that are not retained as verified facts in the current canonical site. Those values were not all established by the official links shown. For current conservative values, see `data/itinerary.js`, `research/AUDIT.md`, and the live [Flagged for Review](../pages/review.html) page. Treat unsupported specifics in the historical tables below as unverified; do not use them as confirmed travel instructions.
+
 **Session ID:** `session-9bfbcc9b`  
 **Task ID:** `T3-days-7-9-transit`  
 **Verification Standard:** Official municipal tourism (`VisitKorea`, `VisitSeoul`, `VisitBusan`), KORAIL (`letskorail.com`), Lotte Hotels (`lottehotel.com`), and Seoul/Busan Metro transit authorities. Unspecified values are left blank (`""`) and flagged for review.
