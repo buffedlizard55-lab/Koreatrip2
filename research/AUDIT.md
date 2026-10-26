@@ -1,4 +1,4 @@
-# Source audit · initial 21 October 2026; integrated recheck 26 October 2026
+# Source audit · 21 October 2026
 
 The site table in `data/itinerary.js` is the line-by-line audit of the supplied itinerary. Each row contains one official link. `sourceKind: context` explicitly means the linked official tourism/destination page **does not establish** the named business; the row remains unverified and its location/hours fields are empty. Partial rows distinguish the facts checked from the unanswered parts. Source links are exposed in the site. No third-party booking listings were used as verification.
 
@@ -49,16 +49,16 @@ The original live dashboard stopped at Day 9 despite the submitted itinerary con
 
 Key findings added to the published **Flagged for Review** page:
 
-- Official Visit Busan listings conflict on Nurimaru APEC House closing time (17:00 vs 18:00); hours are blank.
-- Haeundae Amso Galbi’s official business site confirms its address and regular hours (11:30–22:00, 15:00–17:00 break); VISITKOREA repeats the Korean address but renders a different English street address and lists a weekend-break variant. The site uses the business’s own details but flags the discrepancy; queue/wait time remains unverified.
+- Visit Busan pages previously appeared to differ on Nurimaru APEC House closing time. The [official VisitKorea page](https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=59747) specifies 09:00–18:00, last admission 17:00, and first-Monday closure; use this clearer listing for Tue Nov 10 (not the closure day) and recheck before travel.
+- Haeundae Amso Galbi location is confirmed. The [restaurant’s official site](https://www.haeundaegalbi.com/) lists 11:30–22:00 with a 15:00–17:00 break; [VisitKorea](https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=73814) confirms the operating span and notes a weekend-break variant (15:15–16:30). [Visit Busan](https://visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000302011001000&uc_seq=2606) instead shows 11:00–22:00, and [MICHELIN](https://guide.michelin.com/us/en/busan-region/busan_1025838/restaurant/haeundae-rib-barbecue-restaurant) splits hours into 11:30–14:00 and 17:00–22:00. The directory prioritizes the restaurant’s own schedule and exposes these alternate listings on Flagged for Review; the supplied early-arrival/queue claim is not confirmed.
 - Haeundae Sky Capsule seasonal winter hours and route are operator-published. The return-ticket assumption and booking availability must be checked in the operator's date-specific booking flow.
 - Coffee It House is unconfirmed as a specific business; its address and hours remain blank. Unnamed breakfast/lunch/dinner stops remain flexible.
 - The Day 11 Gamcheon–Songdo–Nampo sequence is geographically dense. Submitted bus/walking estimates are not confirmed as fixed durations; live transit directions are needed.
 - BUSAN X the SKY was requested on both Days 10 and 12; both entries are preserved with a duplicate note.
 - Busan’s official event calendar covers the year through Dec 31 and lists the Gwangalli M Drone Light Show every Saturday, at winter times 19:00 and 21:00, about 12 minutes. The Nov 14 show is a recurring Saturday date; weather/technical delays or cancellation remain possible. Recheck the [official event page](https://www.busan.go.kr/eng/bsevents/1713160) and [organizer](https://www.gwangallimdrone.co.kr/en/home) on the day.
 - Day 13 and Day 15 are intentionally unplanned, matching the source itinerary.
-- Day 16 return KTX train, fare and duration remain blank until a particular KORAIL service is chosen. AREX All-Stop, not the non-stop Express, serves Hongik University Station; the [official AREX station page](https://www.arex.or.kr/station/trainTime.do?stnCd=030&menuNo=MN201503300000000025&tab=2) provides station/train information. Follow current operator details.
-- L7’s official dated package page lists 12:00 checkout for November, while the user-supplied reminder says 11:00. The issue is visible on Flagged for Review; travelers should follow their reservation-specific policy.
+- Day 16 return KTX train, fare and duration remain blank until a particular KORAIL service is chosen. AREX All-Stop, not the non-stop Express, serves Hongik University Station; the [official AREX station page](https://www.arex.or.kr/station/trainTime.do?stnCd=030&menuNo=MN201503300000000025&tab=2) provides station/train information. Follow live operator details.
+- Lotte’s dated official package page lists November checkout at 12:00; the supplied 11:00 reminder conflicts with that listing. The itinerary flags the discrepancy and directs travelers to their reservation’s applicable policy.
 - Earlier cross-session report `verification/days-7-9-transit.md` includes specific train, taxi and local transit estimates not retained in the canonical dataset because the operator sources linked there do not establish every asserted value. Use the canonical `data/itinerary.js` and live `pages/review.html` for current values; do not rely on a generic KTX fare/duration/platform rule.
 
 No flight, hotel, or rail booking confirmation was supplied. Blank cells mean unconfirmed, not closed or unavailable.
