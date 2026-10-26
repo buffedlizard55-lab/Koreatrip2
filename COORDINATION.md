@@ -144,17 +144,7 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   3. **Site & Dashboard Architecture**: Multi-page dashboard with mobile-responsive layout, Day-by-Day schedule, filterable Places & Hours directory, Transit Guide with step-by-step public transit from base hotels (Stanford Hotel Myeongdong & L7 Haeundae), Category Subpages (Food, Cafés & Bakeries, Markets, Shopping, Sights & Experiences, Hotels & Stays), and Flagged for Review page.
   4. **Validation**: `node scripts/validate.mjs` and `node scripts/build.mjs` pass cleanly with zero errors. All assets and internal links verified.
   5. **Pull Request & Merge**: PR created from `arena/9f0c6894-koreatrip2` to `main`, successfully merged, and confirmed ready for GitHub Pages live deployment at `https://buffedlizard55-lab.github.io/Koreatrip2/`.
-| T8580a144-1 | Extend verified itinerary to full 16-day (Nov 1–16) Seoul→Busan→Seoul with Busan coastal, Gamcheon, Songdo, Gwangalli & return transfer | in progress | arena/8580a144-koreatrip2 | `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md`, `scripts/validate.mjs`, `pages/*` | Adding verified Busan Week 2 entries (Days 10–16), official VisitBusan/KORAIL/SEA LIFE/Gwangalli/Blueline sources, leaving unverified blank |
-| T8580a144-2 | Final integration: re-verify all rows, build check, PR to main & Pages deploy | unclaimed | arena/8580a144-koreatrip2 | all | Will verify 16 days, all rows have official HTTPS links, site builds, no broken links |
 
-## Session `8580a144` (`arena/8580a144-koreatrip2`) Work Board & Claim Log
-
-- **Session ID**: `8580a144`
-- **Branch**: `arena/8580a144-koreatrip2` (fixed by Arena; working branch for this session)
-- **Scope & Role**: Complete the professional travel itinerary site for two adult travelers: extend verified data from 9 to 16 days (Seoul Myeongdong → Busan Haeundae → Seoul Hongdae), verify exact hours/days/locations line-by-line from official sources, ensure every table row has an official HTTPS link, mobile-friendly dashboard with per-day drill-down, public-transport guidance from base hotels, and Flagged for Review page.
-- **Status**: Claimed `T8580a144-1` (in progress); `T8580a144-2` pending completion of verification.
-- **Files touched (planned)**: `data/itinerary.js`, `assets/app.js`, `assets/style.css`, `scripts/validate.mjs`, `scripts/build.mjs`, `research/AUDIT.md`, `README.md`, `pages/*.html`, `COORDINATION.md`
-- **Coordination**: Will merge without discarding prior sessions' 100% logs; new extended Busan data appended, not overwriting prior Seoul verification. `git pull --rebase` before push.
 
 
 
@@ -190,3 +180,18 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 - During post-deploy manual review of the live `pages/review.html`, the Day 14 issue text still repeated an obsolete claim that official sources conflicted on duration. Directly fetched [Busan Metropolitan Government's 2026 Gwangalli M Drone Light Show page](https://www.busan.go.kr/eng/bsevents/1713160) explicitly says performances take about 12 minutes, winter Saturday times are 19:00 and 21:00, and weather/technical issues may delay or cancel the show. The canonical Day 14 directory row and review copy are corrected; the organizer link is included for live schedule checks. `node scripts/validate.mjs` and `node scripts/build.mjs` pass. This correction is being published in a follow-up PR.
 - Publication-log follow-up: [PR #15](https://github.com/buffedlizard55-lab/Koreatrip2/pull/15) merged on 2026-10-26 as `0219d4309e49097f0f728404c7f5462f88cce450`; check [40276920684](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40276920684) passed, post-merge validation [40276948563](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40276948563) and Pages deployment [40276947988](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40276947988) passed, and Pages API reports `built`.
 - Drone-copy correction: [PR #16](https://github.com/buffedlizard55-lab/Koreatrip2/pull/16) merged on 2026-10-26 as `3efdbd5a7c1e0ddb05550808261b0f980a6012fe`; PR validation [40277103122](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40277103122), post-merge validation [40277132168](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40277132168), and Pages deployment [40277131396](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40277131396) passed. Pages API reports `built`; a cache-busted live review-page fetch showed the corrected approximate 12-minute official description.
+
+## Session `8580a144` (`arena/8580a144-koreatrip2`) — Final reconciled handoff to main (7390612)
+
+- **Session ID**: `8580a144` (Arena branch `arena/8580a144-koreatrip2`)
+- **Initial work**: Claimed T8580a144-1, built 82-entry/19-route independent 16-day draft with VisitBusan/KTO/Blueline/SEA LIFE/Busan City/KORAIL sources.
+- **Discovery**: On fetch, `origin/main` had advanced to `3efdbd5` → `7390612` (PRs #13–#20, sessions `e6c8393b` + `ddad0014` with drone fix `fed1cdf` + `77effca`). The canonical 16-day plan is `84 entries/16 routes` with `verification/days-10-16.md`.
+- **Resolution (2026-10-26)**: Skipped obsolete 82-entry draft during rebase onto `7390612`; retained canonical 84/16 dataset. Checked out `origin/main` dataset for `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md` (includes `fed1cdf` drone fix + `77effca` doc). Preserved all prior session logs (100% retention) and appended this handoff. No prior work discarded.
+- **Verification after checkout**: `node scripts/validate.mjs` → `OK: 16 days, 84 place entries, 16 routes, 11 HTML pages; all rows and steps have official links.` `node scripts/build.mjs` → `Built 14 audited static files in build/`.
+- **Status**: `done` — branch now mirrors `origin/main` 16-day canonical (7390612) plus this COORDINATION handoff.
+
+| ID | Task | Status | Owner | Files | Notes |
+|---|---|---|---|---|---|
+| T8580a144-1 | Extend verified itinerary to full 16-day (Nov 1–16) Seoul→Busan→Seoul with Busan coastal, Gamcheon, Songdo, Gwangalli & return transfer | done (adopted canonical `ddad0014` + `fed1cdf` + `77effca`) | arena/8580a144-koreatrip2 | `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md`, `scripts/validate.mjs`, `pages/*`, `verification/days-10-16.md` | Canonical 84/16 with Blueline/SEA LIFE/Busan City drone calendar; see `verification/days-10-16.md` |
+| T8580a144-2 | Final integration: re-verify all rows, build check, PR to main & Pages deploy | done | arena/8580a144-koreatrip2 | all | Validation + build pass; Pages live at https://buffedlizard55-lab.github.io/Koreatrip2/; PR #19→20 merge will be COORDINATION-only |
+
