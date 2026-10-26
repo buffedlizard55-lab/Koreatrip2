@@ -1,0 +1,236 @@
+{
+  "session": "230543ec",
+  "checked": "2026-10-26",
+  "scope": "Week 2 Busan, Days 10-16 (working dates Tue Nov 10 - Mon Nov 16, 2026)",
+  "rule": "Values come only from the linked official source. Blank means not officially confirmed, never zero or closed.",
+  "entries": [
+    {
+      "day": 10,
+      "name": "Haeundae Beach morning walk",
+      "status": "partial",
+      "address": "264 Haeundaehaebyeon-ro, Haeundae-gu, Busan",
+      "hours": "Official beach facilities 09:00-18:00; promenade open",
+      "source": "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=373"
+    },
+    {
+      "day": 10,
+      "name": "Haeundae Amso Galbijip",
+      "status": "verified",
+      "address": "333 Haeundaehaebyeon-ro, Haeundae-gu, Busan",
+      "hours": "Daily 11:30-22:00, break 15:00-17:00 (official site); KTO: weekend break 15:15-16:30, closed Seollal/Chuseok",
+      "source": "https://www.haeundaegalbi.com/home-1",
+      "extra": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=73814",
+      "michelin": "https://guide.michelin.com/us/en/busan-region/busan_1025838/restaurant/haeundae-rib-barbecue-restaurant"
+    },
+    {
+      "day": 10,
+      "name": "Dongbaekseom Island & Coastal Trail",
+      "status": "verified",
+      "address": "67 Dongbaek-ro, Haeundae-gu, Busan",
+      "hours": "Open year-round (outdoor trail)",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=81541"
+    },
+    {
+      "day": 10,
+      "name": "Nurimaru APEC House",
+      "status": "verified",
+      "address": "116 Dongbaek-ro, Haeundae-gu, Busan",
+      "hours": "09:00-18:00, last admission 17:00, closed 1st Monday monthly (Nov 2, 2026 - visit date unaffected)",
+      "fee": "Free",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301001001000&uc_seq=2121&lang_cd=en",
+      "extra": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=59747"
+    },
+    {
+      "day": 10,
+      "name": "Blueline Park Sky Capsule",
+      "status": "partial",
+      "address": "Mipo Station <-> Cheongsapo Station, Haeundae-gu",
+      "hours": "November (winter) 08:30-18:00; ~30 min one way, 2.0 km",
+      "fee": "",
+      "flag": "Per-capsule pricing; official English pages describe one-way boarding - 'book round trip' instruction unconfirmed",
+      "source": "https://www.bluelinepark.com/eng/skyCapsuleTime.do",
+      "extra": "https://www.bluelinepark.com/eng/skyCapsuleCourse.do"
+    },
+    {
+      "day": 10,
+      "name": "Cheongsapo Daritdol Observatory",
+      "status": "verified",
+      "address": "Cheongsapo, Haeundae-gu, Busan",
+      "hours": "09:00-18:00 (Jun-Aug to 20:00)",
+      "fee": "Free",
+      "source": "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=282"
+    },
+    {
+      "day": 11,
+      "name": "Gamcheon Culture Village",
+      "status": "verified",
+      "address": "203 Gamnae 2-ro, Saha-gu, Busan",
+      "hours": "Nov-Feb 09:00-17:00 (Mar-Oct 09:00-18:00)",
+      "fee": "Free",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301001001000&uc_seq=365&lang_cd=en",
+      "extra": "https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=72894"
+    },
+    {
+      "day": 11,
+      "name": "Coffee It House",
+      "status": "unverified",
+      "address": "",
+      "hours": "",
+      "flag": "No official source; third-party hours conflict (09:30-18:30 vs 10:30-20:00)",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301001001000&uc_seq=365&lang_cd=en",
+      "sourceKind": "context"
+    },
+    {
+      "day": 11,
+      "name": "BIFF Square & Nampo-dong",
+      "status": "partial",
+      "address": "Nampo-dong, Jung-gu, Busan",
+      "hours": "",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=95411"
+    },
+    {
+      "day": 11,
+      "name": "Jagalchi Market",
+      "status": "verified",
+      "address": "52 Jagalchihaean-ro, Jung-gu, Busan",
+      "hours": "05:00-22:00; closed 1st & 3rd Tuesdays (Visit Busan adds 5th). Nov 2026 closures: Nov 3, Nov 17 - Wed Nov 11 open",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=69318",
+      "extra": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301003001000&uc_seq=412&lang_cd=en"
+    },
+    {
+      "day": 11,
+      "name": "Songdo Beach",
+      "status": "verified",
+      "address": "100 Songdohaebyeon-ro, Seo-gu, Busan",
+      "hours": "06:00-23:00, open year-round",
+      "fee": "Free",
+      "source": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301001001000&uc_seq=286&lang_cd=en"
+    },
+    {
+      "day": 11,
+      "name": "Songdo Cloud Trails",
+      "status": "verified",
+      "address": "Songdo Beach, Seo-gu, Busan",
+      "hours": "Daily 06:00-23:00",
+      "fee": "Free",
+      "source": "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=282"
+    },
+    {
+      "day": 11,
+      "name": "Busan Air Cruise (Songdo Marine Cable Car)",
+      "status": "verified",
+      "address": "171 Songdohaebyeon-ro, Seo-gu, Busan",
+      "hours": "Sep-Nov 09:00-21:00; last ticket 30 min before close",
+      "fee": "Air Cruise RT 19,000 KRW / OW 15,000 KRW; Crystal RT 24,000 KRW / OW 19,000 KRW (adult)",
+      "source": "https://en.busanaircruise.co.kr/info/price?rank=1",
+      "extra": "https://en.busanaircruise.co.kr/info/time?rank=2"
+    },
+    {
+      "day": 11,
+      "name": "Gukje Market",
+      "status": "partial",
+      "address": "Sinchang-dong 4-ga area, Jung-gu, Busan",
+      "hours": "09:00-20:00 (varies by shop)",
+      "flag": "Closure listings conflict: KTO 'Sundays' vs others '1st & 3rd Sundays'; Wed visit unaffected",
+      "source": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=96189",
+      "extra": "https://www.visitbusan.net/index.do?menuCd=DOM_000000301003001000&uc_seq=399&lang_cd=en"
+    },
+    {
+      "day": 12,
+      "name": "BUSAN X the SKY",
+      "status": "verified",
+      "address": "LCT Landmark Tower 98-100F, 30 Dalmaji-gil, Haeundae-gu, Busan",
+      "hours": "Daily 10:00-21:00, last admission 20:30",
+      "fee": "Adult 29,000 KRW; child/senior 26,000 KRW (operator)",
+      "flag": "Also listed as Day 10 option - plan one visit. '$17.59 on Klook' is a reseller rate, not official",
+      "source": "https://www.busanxthesky.com/",
+      "extra": "https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=33642"
+    },
+    {
+      "day": 12,
+      "name": "SEA LIFE Busan Aquarium",
+      "status": "verified",
+      "address": "266 Haeundaehaebyeon-ro, Haeundae-gu, Busan",
+      "hours": "Weekdays 10:00-19:00 (last entry 18:00); weekends 10:00-20:00",
+      "fee": "Walk-up adult 32,000 KRW / child 27,500 KRW; KTO lists senior 21,000 KRW; online advance cheaper",
+      "flag": "Itinerary '$15 ticket' is not an official walk-up price",
+      "source": "https://www.visitsealife.com/busan/en/plan-your-visit/before-you-visit/opening-hours/",
+      "extra": "https://www.visitsealife.com/busan/en/tickets-passes/"
+    },
+    {
+      "day": 13,
+      "name": "Open day",
+      "status": "unverified",
+      "flag": "No activities supplied for Fri Nov 13",
+      "source": "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=373",
+      "sourceKind": "context"
+    },
+    {
+      "day": 14,
+      "name": "Gwangalli Beach",
+      "status": "verified",
+      "address": "219 Gwanganhaebyeon-ro, Suyeong-gu, Busan",
+      "source": "https://www.busan.go.kr/eng/beaches"
+    },
+    {
+      "day": 14,
+      "name": "Gwangalli M Drone Light Show",
+      "status": "verified",
+      "address": "Gwangalli Beach, Suyeong-gu, Busan",
+      "hours": "Every Saturday; Oct-Feb 19:00 & 21:00; ~12 min",
+      "fee": "Free",
+      "note": "Matches itinerary's 7pm winter show plan for Sat Nov 14, 2026; weather can delay/cancel",
+      "source": "https://www.busan.go.kr/eng/bsevents/1713160",
+      "extra": "https://www.visitbusan.net/index.do?menuCd=DOM_000000302008001000&uc_seq=1769&lang_cd=en"
+    },
+    {
+      "day": 15,
+      "name": "Open day",
+      "status": "unverified",
+      "flag": "No activities supplied for Sun Nov 15",
+      "source": "https://www.visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=373",
+      "sourceKind": "context"
+    },
+    {
+      "day": 16,
+      "name": "L7 Haeundae check-out",
+      "status": "partial",
+      "hours": "Official check-out 12:00 (itinerary's 'before 11:00' is a preference)",
+      "source": "https://www.lottehotel.com/haeundae-l7/en"
+    },
+    {
+      "day": 16,
+      "name": "Taxi to Busan Station",
+      "status": "unverified",
+      "flag": "'1 hour ride, $20-$30' has no official source; Metro Line 2->1 is the verified transit alternative",
+      "source": "https://www2.humetro.busan.kr/homepage/english/facilities/list.do?gubun=2&menu_no=1006010602",
+      "sourceKind": "context"
+    },
+    {
+      "day": 16,
+      "name": "KTX Busan -> Seoul",
+      "status": "partial",
+      "fee": "59,800 KRW standard adult",
+      "note": "Platform announced 15-20 min before departure",
+      "source": "https://www.korail.com/ticket/main"
+    },
+    {
+      "day": 16,
+      "name": "AREX All-Stop Seoul Station -> Hongik Univ.",
+      "status": "partial",
+      "note": "Operator route map confirms All-Stop train serves Hongik Univ.; the Express does NOT stop there",
+      "source": "https://www.airportrailroad.com/train/express/introduce"
+    },
+    {
+      "day": 16,
+      "name": "Mercure Ambassador Seoul Hongdae",
+      "status": "partial",
+      "address": "144 Yanghwa-ro, Mapo-gu, Seoul",
+      "hours": "Check-in 15:00, check-out 12:00",
+      "flag": "Room booking and the '8-minute walk' figure unconfirmed",
+      "source": "https://all.accor.com/hotel/B696/index.en.shtml",
+      "extra": "https://www.ambatel.com/mercure/hongdae/en/main.do"
+    }
+  ],
+  "note": "Independent cross-check by session 230543ec, parallel to session ddad0014's verification; findings agree."
+}
