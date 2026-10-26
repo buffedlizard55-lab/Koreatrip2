@@ -4,7 +4,7 @@ import { resolve,dirname } from 'node:path';
 let failures=[];
 const fail=(m)=>failures.push(m);
 for(const [i,p] of places.entries()){
- if(![1,2,3,4,5,6,7,8,9].includes(p.day))fail(`Row ${i}: invalid day`);
+ if(!Array.from({length:16},(_,n)=>n+1).includes(p.day))fail(`Row ${i}: invalid day`);
  if(!['verified','partial','unverified'].includes(p.status))fail(`Row ${i}: invalid status`);
  if(!p.name||!p.type||!p.detail)fail(`Row ${i}: missing identifying info`);
  if(!p.source?.startsWith('https://'))fail(`Row ${i}: missing HTTPS official source`);
@@ -14,7 +14,8 @@ for(const [i,p] of places.entries()){
 }
 const ids=new Set();
 for(const day of days){if(ids.has(day.n))fail(`Duplicate day ${day.n}`);ids.add(day.n);if(!day.steps?.length)fail(`No steps day ${day.n}`);for(const step of day.steps)if(!step[2]?.startsWith('https://'))fail(`Unsourced step day ${day.n}`)}
-if(days.length!==9)fail('Expected nine days');
+if(days.length!==16)fail('Expected sixteen days');
+for(let n=1;n<=16;n++)if(!ids.has(n))fail(`Missing day ${n}`);
 for(const [i,r] of routes.entries())if(!r.source?.startsWith('https://'))fail(`Route ${i}: missing official link`);
 const files=['index.html',...['days','places','transport','review','food-guide','cafes-guide','markets-guide','shopping-guide','sights-guide','stays-guide'].map(n=>`pages/${n}.html`)];
 for(const f of files){if(!existsSync(f)){fail(`Missing ${f}`);continue};const text=readFileSync(f,'utf8');for(const m of text.matchAll(/(?:href|src)="([^"#]+)"/g)){const url=m[1];if(url.startsWith('http')||url.startsWith('data:'))continue;const target=resolve(dirname(f),url.split('#')[0]);if(!existsSync(target))fail(`${f}: broken asset ${url}`)}}
