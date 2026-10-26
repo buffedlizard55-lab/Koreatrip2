@@ -20,6 +20,7 @@ Shared task board for parallel agent sessions.
 
 | ID | Task | Status | Owner | Files | Notes |
 |----|------|--------|-------|-------|-------|
+| E6-full-trip-coverage | Final integration: restore and source-audit itinerary Days 10–16 (Busan), extend the daily dashboard and transport guide to the full 16-day trip, and validate the published Pages source | in progress | e6f5656b (`arena/e6f5656b-koreatrip2`; fixed Arena branch) | `data/itinerary.js`, `assets/app.js`, `scripts/validate.mjs`, `index.html`, `pages/*.html`, `README.md`, `research/AUDIT.md`, `verification/days-10-16.md`, `COORDINATION.md` | No active task for Days 10–16 was listed; prior integration covered only Days 1–9. Official-source verification required; unknown location/hour/fare/time fields stay blank and flagged. |
 | T1 | Create COORDINATION.md | done | arena/6c06fb0a-koreatrip2 | COORDINATION.md | initial |
 | T2 | Verify Week1 Seoul itinerary entries (hotels, transport, attractions, restaurants, stores) | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json, pages/*, assets/* | 59 entries; official sources linked per row |
 | T3 | Verify Week1 Day8-9 & Busan entries | done | arena/6c06fb0a-koreatrip2 | data/itinerary.json | Day 8/9 + Busan entries included; unverified flagged |
@@ -264,3 +265,10 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   - **PR**: [PR #26](https://github.com/buffedlizard55-lab/Koreatrip2/pull/26) merged to `main` on 2026-10-26T06:21:39Z as `14805171deea771d910765fdacea1cdccd916a02` (`gh pr merge 26 --merge`).
   - **CI & Pages Deploy**: PR `validate` check ([run 40279310870](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40279310870)) passed; post-merge `Validate Pages source` ([run 40279361567](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40279361567)) and `pages build and deployment` ([run 40279361107](https://github.com/buffedlizard55-lab/Koreatrip2/actions/runs/40279361107), build `1315132960`) succeeded; Pages API reports `status: built` on `main:/`.
   - **Live Site Confirmed**: Fetched https://buffedlizard55-lab.github.io/Koreatrip2/ (`index.html`, `data/itinerary.js`, `pages/transport.html`, and `pages/review.html`) and confirmed all 16 days, 84 verified/flagged place entries, 3-hotel header & 17 public transit routes, and 27 flagged items / 20 planning irregularities are live.
+
+---
+
+## Session `e6f5656b` — Full-trip coverage final integration
+
+- **Claim (2026-10-26)**: `E6-full-trip-coverage`, status `in progress`. Current Arena branch is fixed as `arena/e6f5656b-koreatrip2`; no alternate branch will be created. File scope is listed in the Tasks table. Prior line-by-line integration covers Days 1–9 only, so this task fills the unrepresented Busan/return itinerary Days 10–16 without claiming earlier findings were rechecked.
+- **Coordination / rebase note**: `git pull --rebase origin main` first encountered add/add conflicts in `COORDINATION.md`, `assets/app.js`, `data/itinerary.js`, and `research/AUDIT.md` because this checkout is shallow and both PR #11 and PR #12 merge commits are shallow boundaries. The rebase was aborted; after confirming the current branch had no unique/uncommitted work and `origin/main` contained PR #11 plus PR #12, the fixed branch was moved to the exact `origin/main` commit. On the required pre-push pull, PR #13 concurrently added its publication note to this same file; the content conflict is resolved here by retaining both that note and this claim. No other session's changes were discarded.
