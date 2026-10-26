@@ -144,7 +144,17 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   3. **Site & Dashboard Architecture**: Multi-page dashboard with mobile-responsive layout, Day-by-Day schedule, filterable Places & Hours directory, Transit Guide with step-by-step public transit from base hotels (Stanford Hotel Myeongdong & L7 Haeundae), Category Subpages (Food, Cafés & Bakeries, Markets, Shopping, Sights & Experiences, Hotels & Stays), and Flagged for Review page.
   4. **Validation**: `node scripts/validate.mjs` and `node scripts/build.mjs` pass cleanly with zero errors. All assets and internal links verified.
   5. **Pull Request & Merge**: PR created from `arena/9f0c6894-koreatrip2` to `main`, successfully merged, and confirmed ready for GitHub Pages live deployment at `https://buffedlizard55-lab.github.io/Koreatrip2/`.
+| T8580a144-1 | Extend verified itinerary to full 16-day (Nov 1–16) Seoul→Busan→Seoul with Busan coastal, Gamcheon, Songdo, Gwangalli & return transfer | in progress | arena/8580a144-koreatrip2 | `data/itinerary.js`, `assets/app.js`, `research/AUDIT.md`, `scripts/validate.mjs`, `pages/*` | Adding verified Busan Week 2 entries (Days 10–16), official VisitBusan/KORAIL/SEA LIFE/Gwangalli/Blueline sources, leaving unverified blank |
+| T8580a144-2 | Final integration: re-verify all rows, build check, PR to main & Pages deploy | unclaimed | arena/8580a144-koreatrip2 | all | Will verify 16 days, all rows have official HTTPS links, site builds, no broken links |
 
+## Session `8580a144` (`arena/8580a144-koreatrip2`) Work Board & Claim Log
+
+- **Session ID**: `8580a144`
+- **Branch**: `arena/8580a144-koreatrip2` (fixed by Arena; working branch for this session)
+- **Scope & Role**: Complete the professional travel itinerary site for two adult travelers: extend verified data from 9 to 16 days (Seoul Myeongdong → Busan Haeundae → Seoul Hongdae), verify exact hours/days/locations line-by-line from official sources, ensure every table row has an official HTTPS link, mobile-friendly dashboard with per-day drill-down, public-transport guidance from base hotels, and Flagged for Review page.
+- **Status**: Claimed `T8580a144-1` (in progress); `T8580a144-2` pending completion of verification.
+- **Files touched (planned)**: `data/itinerary.js`, `assets/app.js`, `assets/style.css`, `scripts/validate.mjs`, `scripts/build.mjs`, `research/AUDIT.md`, `README.md`, `pages/*.html`, `COORDINATION.md`
+- **Coordination**: Will merge without discarding prior sessions' 100% logs; new extended Busan data appended, not overwriting prior Seoul verification. `git pull --rebase` before push.
 
 
 
