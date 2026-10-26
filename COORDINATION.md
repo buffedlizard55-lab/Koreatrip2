@@ -165,3 +165,4 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
   - User-supplied "Nov 2, 2006" year remains a typo for 2026 (weekdays match 2026).
 - **Validation**: `node scripts/validate.mjs` and `node scripts/build.mjs` (see PR for result).
 - **Status**: `done` for the spot-check scope. A full line-by-line re-verification of all rows is not claimed; rows not listed above remain as previously verified by sessions `9bfbcc9b`, `535004bc`, and `9f0c6894`.
+- **Publication (session `e6c8393b`)**: PR https://github.com/buffedlizard55-lab/Koreatrip2/pull/12 merged to `main` as `7a5c3057f1ab36d79459a784af2846b6008ed7c0` (merge commit, `gh pr merge --merge`) after check `validate` (run 40276099220) passed. GitHub Pages build for `7a5c3057` reported `built`. Site: https://buffedlizard55-lab.github.io/Koreatrip2/ (the Pages host is not reachable from the agent sandbox, so the live page was checked via the Pages API only).
