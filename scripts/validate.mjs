@@ -20,6 +20,15 @@ else if(amso.source!=='https://www.haeundaegalbi.com/'||amso.extra!=='https://en
 const nurimaru=places.find(p=>p.name==='Nurimaru APEC House');
 if(!nurimaru)fail('Missing re-audited place: Nurimaru APEC House');
 else if(!nurimaru.hours.includes('09:00–18:00')||nurimaru.extra!=='https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=59747')fail('Nurimaru must use the KTO hours and last-admission source');
+const cheongsapo=places.find(p=>p.name==='Cheongsapo Daritdol Observatory');
+if(!cheongsapo)fail('Missing place: Cheongsapo Daritdol Observatory');
+else if(cheongsapo.status!=='partial'||!cheongsapo.flag||cheongsapo.hours||!cheongsapo.detail.includes('schedules conflict')||cheongsapo.source!=='https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=112698'||cheongsapo.extra!=='https://visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000301001001000&uc_seq=282')fail('Cheongsapo hours conflict must remain blank, flagged and linked to both official listings');
+const l7=places.find(p=>p.name==='L7 Haeundae by LOTTE HOTELS');
+if(!l7)fail('Missing place: L7 Haeundae');
+else if(!l7.hours.includes('check-out 11:00')||l7.source!=='https://www.lottehotel.com/haeundae-l7/en'||l7.extra)fail('L7 must use the current official 11:00 standard checkout source, without the retired package link');
+const seoulMetro=routes.find(r=>r.leg==='Stanford → Gyeongbokgung');
+if(!seoulMetro)fail('Missing Seoul Metro route: Stanford → Gyeongbokgung');
+else if(seoulMetro.source!==S.metro||seoulMetro.source.includes('themeList.do')||seoulMetro.source.includes('cyberStation.do'))fail('Seoul Metro route must use the HTTPS English homepage, not an HTTPS-to-HTTP redirect');
 if(days.length!==16)fail('Expected all 16 supplied itinerary days');
 for(let n=1;n<=16;n++)if(!ids.has(n))fail(`Missing day ${n}`);
 for(const [i,r] of routes.entries())if(!r.source?.startsWith('https://'))fail(`Route ${i}: missing official link`);
