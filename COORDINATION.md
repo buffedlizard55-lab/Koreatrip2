@@ -147,3 +147,21 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 
 
 
+
+---
+
+## Session `e6c8393b` (`arena/e6c8393b-koreatrip2`) — Re-verification & correction pass
+
+- **Claim (2026-10-26)**: Task `E6-reverify-spotcheck`, status `in progress` then `done`. Files: `data/itinerary.js` (Gwangjang row only), `assets/app.js` (Review filter only), `research/AUDIT.md` (item 2 only), `COORDINATION.md`. Branch name is fixed by the environment (`arena/e6c8393b-koreatrip2`), so it does not follow the `session-<id>/<task>` pattern; no other branch was created.
+- **Verified against official sources this session** (fetched directly):
+  - Gyeongbokgung hours/admission — [Royal Palaces & Tombs Center admission page](https://royal.khs.go.kr/ENG/contents/E702000000.do): Nov–Dec 09:00–17:00, last admission 16:00, closed Tuesdays (moved to a public-holiday rule), adult ₩3,000 (ages 19–64). **Matches the site.**
+  - Free admission Oct 29–Nov 15, 2026 — [Royal Palaces notice, 2026-09-22 (Korean)](https://royal.khs.go.kr/ROYAL/contents/R403000000.do?id=20260922161754771774&schM=view): free for 4 palaces and Jongmyo "except closing days". **Matches the site (Nov 4 free).**
+  - N Seoul Tower hours — [Hours](https://www.nseoultower.co.kr/eng/visit/use.asp): Observatory 10:00–22:30 weekday / 10:00–23:00 weekend; last entry 30 min before close. **Matches the site.** Observatory adult ₩29,000 — [Admission](https://www.nseoultower.co.kr/eng/visit/use2.asp). **Matches the site.**
+  - Gwangjang Market — [VisitKorea `vcontsId=106345`](https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=106345): market 09:00–18:00, closed Sundays; food street 09:00–23:00; address 88 Changgyeonggung-ro. **Matches the site.**
+- **Correction (irregularity)**: The Gwangjang row previously marked the **Gohyang Kalguksu (Stall A70) Monday closure as "verified"** and cited the VisitKorea page. That page does **not** mention the stall or any Monday/4th-Sunday closure. Secondary guides (not official) report the Monday closure. The row is now `partly checked` and flagged for review; the Review page filter now includes flagged rows. The Day 2 (Nov 2) plan does not depend on this stall.
+- **Other irregularities noted, not changed**:
+  - `data/flagged.json` (legacy) says Gohyang is at "East Gate Booth #70"; other sources say "Stall A70". Unresolved; legacy file, not published.
+  - Stall-level hours for Gohyang/Soul Market/Lunch near palace remain unverified (no official source).
+  - User-supplied "Nov 2, 2006" year remains a typo for 2026 (weekdays match 2026).
+- **Validation**: `node scripts/validate.mjs` and `node scripts/build.mjs` (see PR for result).
+- **Status**: `done` for the spot-check scope. A full line-by-line re-verification of all rows is not claimed; rows not listed above remain as previously verified by sessions `9bfbcc9b`, `535004bc`, and `9f0c6894`.
