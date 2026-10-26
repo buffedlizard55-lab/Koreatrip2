@@ -1,6 +1,6 @@
 # Korea, considered.
 
-A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Busan → Seoul, working dates November 1–16, 2026. Open [the published site](https://buffedlizard55-lab.github.io/Koreatrip2/) or serve this directory over HTTP (ES modules do not run from `file://`).
+A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Busan, working dates November 1–16, 2026 (Seoul → Busan → Seoul). Open [the published site](https://buffedlizard55-lab.github.io/Koreatrip2/) or serve this directory over HTTP (ES modules do not run from `file://`).
 
 ## Structure
 
@@ -12,11 +12,13 @@ A static, mobile-friendly evidence-led itinerary for two travelers, Seoul → Bu
 - `pages/review.html`: flagged uncertainties, including all unverified rows
 - `data/itinerary.js`: single source for site data; empty location/hour values mean not officially confirmed
 - `research/AUDIT.md`: verification notes and key corrections
-- `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`: archived prior-session worksheets (`session-9bfbcc9b`), retained for provenance—not the current source of truth
-- `data/verified-itinerary.json`, `data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`: archived prior-session datasets (`session-9bfbcc9b`), retained for provenance—not the current source of truth
+- `verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`, `verification/days-10-16.md`: audit reports; the Day 7–9 report is a historical snapshot with superseded unsupported estimates explicitly disclaimed
+- `data/verified-itinerary.json`, `data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`: archived session datasets retained for provenance, not the current source of truth
 - `COORDINATION.md`: task board and handoff record
 
-The canonical, current itinerary is `data/itinerary.js`; `research/AUDIT.md` records the integrated audit and corrections. Older verification worksheets and JSON snapshots are preserved as provenance only and may contain superseded claims—do not use them as current evidence. Source status is deliberately conservative. An “official context · not evidence” link points to a government/tourism area page, **not** a confirmation of a specific shop. No booking information was provided. All regular hours should be reconfirmed for the day of travel.
+Days 13 and 15 remain open because no activities were supplied. Date-specific rail services and reservations are not inferred. Exact transit times/fares remain blank where an official source does not confirm them; specific unknown businesses are flagged.
+
+The canonical, current itinerary is `data/itinerary.js`; `research/AUDIT.md` and `verification/days-10-16.md` describe the integrated audit. Archived reports and JSON snapshots are provenance only and may contain superseded claims—do not use them as current evidence. Source status is deliberately conservative. An “official context · not evidence” link points to a government/tourism area page, **not** a confirmation of a specific shop. No booking information was provided. All regular hours should be reconfirmed for the day of travel.
 
 ## Local validation
 
