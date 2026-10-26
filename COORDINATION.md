@@ -206,3 +206,18 @@ Session ID: `96a67227` (Arena branch `arena/96a67227-koreatrip2`; branch name is
 - **Site**: Live 16-day dashboard — index overview, `pages/days.html` per-day drill-down (jumpbar + timeline tables + tips), `pages/places.html` filterable directory (84 rows, all with official HTTPS links), `pages/transport.html` (16 routes from Stanford → L7 → mercure Hongdae), category guides, and Flagged for Review.
 - **Status**: `done` — all repo work verified line-by-line from official trusted sources, no hallucinations; links provided for manual review; site is mobile-friendly and organized for busy travelers.
 
+---
+
+## Session `230543ec` (`arena/230543ec-koreatrip2`) — Independent Days 10–16 verification, cross-check & operator-source refinements
+
+- **Claim (2026-10-26)**: Task `T230543ec-days-10-16` was claimed and pushed to `arena/230543ec-koreatrip2` (commit `4b6a5e6`) when `origin/main` was at PR #12 and the published site still ended at Day 9. Branch name is fixed by the environment, so it does not follow the `session-<id>/<task>` pattern.
+- **Duplicate-work incident & resolution (logged per protocol)**: Session `ddad0014` claimed the same scope in parallel (its claim commit `542daf5` landed on `main` via PR #14 while this session was mid-research; neither session saw the other's claim before starting). When `git pull --rebase` surfaced the conflict, this session **stopped, aborted the replay of its own full Days 10–16 site extension, and adopted `main`'s published version wholesale — no work from `ddad0014` (or any session) was discarded.** This session's parallel output was converted into (a) an independent cross-check and (b) surgical refinements where operator-primary sources resolve values `main` had left blank or flagged as conflicting.
+- **Cross-check result**: This session's independently gathered official facts (Visit Busan, VisitKorea, Busan Metropolitan City, Blueline Park, SEA LIFE, Busan Air Cruise, BUSAN X the SKY, haeundaegalbi.com, KORAIL, AREX, LOTTE Hotels, Accor/Ambatel) **agree with every published `ddad0014` row** for Days 10–16. Two independent verification lines now exist: `verification/days-10-16.md` (ddad0014) and `verification/days-10-16-session-230543ec.md` (this session), plus dataset `data/days-10-16-session-230543ec.json`.
+- **Refinements contributed (operator sources beat aggregator listings; each noted in the row's detail)**:
+  1. **BUSAN X the SKY** (Days 10 & 12): price was blank ("differs across listings") → operator site `busanxthesky.com` states adult ₩29,000 / child·senior ₩26,000; operator made primary source, KTO kept as extra.
+  2. **Busan Air Cruise** (Day 11): fare was blank → operator fare page `en.busanaircruise.co.kr/info/price` lists Air Cruise RT ₩19,000 / OW ₩15,000, Crystal RT ₩24,000 / OW ₩19,000; status partial → verified.
+  3. **Nurimaru APEC House** (Day 10): hours were blank over a 17:00-vs-18:00 conflict → KTO `vcontsId=59747` resolves it (close 18:00, last admission 17:00); status partial → verified.
+  4. **Haeundae Amso Galbijip** (Day 10): break ambiguity resolved — official site states break 15:00–17:00; KTO's weekend 15:15–16:30 variant noted.
+  5. **SEA LIFE Busan** (Day 12): added KTO walk-up fee schedule (₩32,000 / ₩27,500 / ₩21,000) documenting why the supplied "$15" is a reseller rate.
+- **Validation**: `node scripts/validate.mjs` → OK: 16 days, 84 place entries, 16 routes, 11 HTML pages; `node scripts/build.mjs` → 14 files; local smoke-serve all 200.
+- **Status**: done (2026-10-26). Flagged items remain published on `pages/review.html` and do not block anything.
