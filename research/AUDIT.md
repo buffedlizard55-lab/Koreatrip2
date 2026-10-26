@@ -41,3 +41,23 @@ The other session’s category dataset prompted re-verification against official
 4. **Brandy Melville Seoul (Seongsu)**: Verified on [Brandy Melville Korea official locations page](https://kr.brandymelville.com/pages/locations) (`101 Yeonmujang-gil, Seongdong-gu, Seoul`, `Daily 11:00–19:00` — note early 7:00 PM closing).
 5. **Preserved Session `9bfbcc9b` Artifacts**: Full line-by-line markdown reports (`verification/days-1-3.md`, `verification/days-4-6.md`, `verification/days-7-9-transit.md`) and structured JSON datasets (`data/days-1-3-session-9bfbcc9b.json`, `data/days-4-6.json`, `data/days-7-9-transit.json`, `data/verified-itinerary.json`) are preserved in the repository alongside all prior sessions' files.
 
+
+
+## Canonical audit addendum — 26 October 2026 (Days 10–16)
+
+The original live dashboard stopped at Day 9 despite the submitted itinerary continuing through Day 16. The canonical data now covers all supplied dates Nov 1–16, 2026, including Busan Days 10–15 and the Busan-to-Seoul return on Day 16. Row-by-row source and uncertainty notes are in [`verification/days-10-16.md`](../verification/days-10-16.md).
+
+Key findings added to the published **Flagged for Review** page:
+
+- Official Visit Busan listings conflict on Nurimaru APEC House closing time (17:00 vs 18:00); hours are blank.
+- Haeundae Amso Galbi is confirmed at 11:30 opening; official sources differ on weekend break details. The supplied 30-minute early-arrival/queue claim and Michelin characterization are not established by the cited sources.
+- Haeundae Sky Capsule seasonal winter hours and route are operator-published. The return-ticket assumption and booking availability must be checked in the operator's date-specific booking flow.
+- Coffee It House is unconfirmed as a specific business; its address and hours remain blank. Unnamed breakfast/lunch/dinner stops remain flexible.
+- The Day 11 Gamcheon–Songdo–Nampo sequence is geographically dense. Submitted bus/walking estimates are not confirmed as fixed durations; live transit directions are needed.
+- BUSAN X the SKY was requested on both Days 10 and 12; both entries are preserved with a duplicate note.
+- Busan’s official event calendar lists the recurring Saturday Gwangalli M Drone Light Show; the 2026 schedule lists Nov 14 at winter performance times 19:00 and 21:00. Schedule/cancellation must be rechecked. The official event page describes each performance as about 12 minutes; this remains approximate and weather/cancellation dependent.
+- Day 13 and Day 15 are intentionally unplanned, matching the source itinerary.
+- Day 16 return KTX train, fare and duration remain blank until a particular KORAIL service is chosen. AREX All-Stop, not the non-stop Express, is required for Hongik University Station.
+- Earlier cross-session report `verification/days-7-9-transit.md` includes specific train, taxi and local transit estimates not retained in the canonical dataset because the operator sources linked there do not establish every asserted value. Use the canonical `data/itinerary.js` and live `pages/review.html` for current values; do not rely on a generic KTX fare/duration/platform rule.
+
+No flight, hotel, or rail booking confirmation was supplied. Blank cells mean unconfirmed, not closed or unavailable.
