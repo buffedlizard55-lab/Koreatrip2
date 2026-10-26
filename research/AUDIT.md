@@ -49,8 +49,8 @@ The original live dashboard stopped at Day 9 despite the submitted itinerary con
 
 Key findings added to the published **Flagged for Review** page:
 
-- Official Visit Busan listings conflict on Nurimaru APEC House closing time (17:00 vs 18:00); hours are blank.
-- Haeundae Amso Galbi is confirmed at 11:30 opening; official sources differ on weekend break details. The supplied 30-minute early-arrival/queue claim and Michelin characterization are not established by the cited sources.
+- Visit Busan pages previously appeared to differ on Nurimaru APEC House closing time. The [official VisitKorea page](https://english.visitkorea.or.kr/svc/whereToGo/locIntrdn/rgnContentsView.do?vcontsId=59747) specifies 09:00–18:00, last admission 17:00, and first-Monday closure; use this clearer listing for Tue Nov 10 (not the closure day) and recheck before travel.
+- Haeundae Amso Galbi location is confirmed. The [restaurant’s official site](https://www.haeundaegalbi.com/) lists 11:30–22:00 with a 15:00–17:00 break; [VisitKorea](https://english.visitkorea.or.kr/svc/contents/contentsView.do?vcontsId=73814) confirms the operating span and notes a weekend-break variant (15:15–16:30). [Visit Busan](https://visitbusan.net/index.do?lang_cd=en&menuCd=DOM_000000302011001000&uc_seq=2606) instead shows 11:00–22:00, and [MICHELIN](https://guide.michelin.com/us/en/busan-region/busan_1025838/restaurant/haeundae-rib-barbecue-restaurant) splits hours into 11:30–14:00 and 17:00–22:00. The directory prioritizes the restaurant’s own schedule and exposes these alternate listings on Flagged for Review; the supplied early-arrival/queue claim is not confirmed.
 - Haeundae Sky Capsule seasonal winter hours and route are operator-published. The return-ticket assumption and booking availability must be checked in the operator's date-specific booking flow.
 - Coffee It House is unconfirmed as a specific business; its address and hours remain blank. Unnamed breakfast/lunch/dinner stops remain flexible.
 - The Day 11 Gamcheon–Songdo–Nampo sequence is geographically dense. Submitted bus/walking estimates are not confirmed as fixed durations; live transit directions are needed.
